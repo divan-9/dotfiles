@@ -39,8 +39,8 @@ local normal_mappings  = {
         ["k"] = { ":Dotnet<cr>", "Build dotnet solution" },
     },
     ["<C-j>"] = { ":ToggleTerm<cr>", "Toggle Term"},
-    ["<C-n>"] = { ":cnext", "Next Quick Fix"},
-    ["<C-m>"] = { ":cprev", "Prev Quick Fix"},
+    ["<C-n>"] = { ":cnext<cr>", "Next Quick Fix"},
+    ["<C-m>"] = { ":cprev<cr>", "Prev Quick Fix"},
 }
 
 local visual_mappings = {
