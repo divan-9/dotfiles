@@ -21,7 +21,7 @@ local normal_mappings  = {
         ["h"] = { ":nohl<cr>", "Nohl" },
         ["/"] = { "<Plug>(comment_toggle_linewise_current)", "Toggle comment" },
         ["q"] = { ":cclose<cr>", "Close Quick Fix List" },
-        ["d"] = { "<cmd>Telescope diagnostics<cr>", "Diagnostics" },
+        ["d"] = { ":Diag<cr>", "Diagnostics" },
         ["n"] = { "<cmd>lua vim.diagnostic.goto_prev()<cr>", "Next diagnostic" },
         ["m"] = { "<cmd>lua vim.diagnostic.goto_next()<cr>", "Prev diagnostic" },
     },

@@ -83,3 +83,12 @@ vim.api.nvim_create_user_command(
   end,
   { nargs = "?" }
 )
+
+vim.api.nvim_create_user_command(
+    "Diag",
+    function(opts)
+        local t = require("telescope_diagnostics")
+        t.get()
+    end,
+    { nargs = 0 }
+)
