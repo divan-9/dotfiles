@@ -25,10 +25,12 @@ vim.opt.background = "dark"
 vim.opt.grepprg = "rg --vimgrep"
 vim.opt.grepformat = "%f:%l:%c:%m"
 vim.o.updatetime = 250
-vim.opt.scrolloff = 9999
+vim.opt.scrolloff = 5
 
 -- Position the (global) quickfix window at the very bottom of the window
 -- (useful for making sure that it appears underneath splits)
 -- NOTE: Using a check here to make sure that window-specific location-lists
 -- aren't effected, as they use the same `FileType` as quickfix-lists.
 vim.cmd("autocmd FileType qf if (getwininfo(win_getid())[0].loclist != 1) | wincmd J | endif")
+vim.cmd("autocmd FileType html setlocal shiftwidth=2 tabstop=2")
+vim.cmd("autocmd FileType vue setlocal shiftwidth=2 tabstop=2")

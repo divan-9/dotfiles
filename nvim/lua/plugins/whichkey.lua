@@ -3,7 +3,9 @@ local M = {
 }
 
 vim.cmd([[
-    autocmd FileType vue lua vue()
+    autocmd FileType cs lua lsp()
+    autocmd FileType vue lua coc()
+    autocmd FileType ts lua coc()
 ]])
 
 local normal_mappings  = {
@@ -13,6 +15,7 @@ local normal_mappings  = {
             name = "+configs",
             ["c"] = { ":e ~/.config/nvim/init.lua<cr>", "init.lua" },
             ["p"] = { ":e ~/.config/nvim/lua/plugins<cr>", "plugins" },
+            ["r"] = { ":LspRestart<cr>", "Resart LSP server"},
         },
         ["f"] = { ":Telescope find_files hidden=true<cr>", "Find files" },
         ["o"] = { ":Telescope oldfiles<cr>", "Old files" },
@@ -21,9 +24,12 @@ local normal_mappings  = {
         ["h"] = { ":nohl<cr>", "Nohl" },
         ["/"] = { "<Plug>(comment_toggle_linewise_current)", "Toggle comment" },
         ["q"] = { ":cclose<cr>", "Close Quick Fix List" },
+        ["<cr>"] = { ":cc<cr>", "Goto Quick Fix Entry" },
         ["d"] = { ":Diag<cr>", "Diagnostics" },
         ["n"] = { "<cmd>lua vim.diagnostic.goto_prev()<cr>", "Next diagnostic" },
         ["m"] = { "<cmd>lua vim.diagnostic.goto_next()<cr>", "Prev diagnostic" },
+        ["g"] = { ":LazyGitCurrentFile<cr>", "Lazy Git" },
+        ["F"] = { ":CocCommand prettier.forceFormatDocument<cr>", "Coc:prettier" },
     },
     ["g"] = {
         ["U"] = { ":lua require('telescope.builtin').lsp_references()<cr>", "Preview usages" },
@@ -41,6 +47,7 @@ local normal_mappings  = {
     ["<C-j>"] = { ":ToggleTerm<cr>", "Toggle Term"},
     ["<C-n>"] = { ":cnext<cr>", "Next Quick Fix"},
     ["<C-m>"] = { ":cprev<cr>", "Prev Quick Fix"},
+    ["U"] = { "<C-r>", "Redo" },
 }
 
 local visual_mappings = {
@@ -66,12 +73,19 @@ local normal_mappings_coc = {
     },
 }
 
-function vue()
+function coc()
     local wk = require("which-key")
-    wk.register(normal_mappings_coc)
+    wk.register(normal_mappings_coc, {
+        buffer = vim.api.nvim_get_current_buf()
+    })
 end
 
-vim.cmd("autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()")
+function lsp()
+    local wk = require("which-key")
+    wk.register(normal_mappings)
+end
+
+-- vim.cmd("autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()")
 
 M.config = function()
     local wk = require("which-key")

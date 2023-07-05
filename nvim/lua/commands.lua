@@ -9,6 +9,8 @@ vim.api.nvim_create_user_command(
     local args = opts.fargs
     table.insert(args, '--vimgrep')
 
+    print(vim.inspect(args));
+
     local job = Job:new({
       command = '/opt/homebrew/bin/ag',
       args = args,

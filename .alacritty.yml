@@ -11,9 +11,9 @@ import:
 font:
   normal:
     family: Fisa Code
-    style: Light
   bold:
     family: Fisa Code
+    style: Bold
   italic:
     family: Fisa Code
     style: Light Italic

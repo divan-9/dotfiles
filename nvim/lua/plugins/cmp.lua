@@ -12,7 +12,7 @@ local M = {
 }
 
 function M.config()
-  vim.o.completeopt = "menuone,noselect"
+  -- vim.o.completeopt = "menuone,noselect"
 
   -- Setup nvim-cmp.
   local cmp = require("cmp")
@@ -32,13 +32,14 @@ function M.config()
       ["<C-Space>"] = cmp.mapping.complete({}),
       ["<C-e>"] = cmp.mapping.close(),
       ["<CR>"] = cmp.mapping.confirm({ select = true }),
+      ["<Tab>"] = cmp.mapping.confirm({ select = true }),
     }),
     sources = cmp.config.sources({
       { name = "nvim_lsp" },
       { name = "luasnip" },
       { name = "buffer" },
       { name = "path" },
-      { name = "neorg" },
+      
     }),
     window = {
         -- completion = cmp.config.window.bordered(),

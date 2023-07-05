@@ -21,7 +21,7 @@ M.config = function()
     lsp.omnisharp.setup({
         cmd = { 
             "dotnet", 
-            "/Users/dmitryivanov/.vscode/extensions/ms-dotnettools.csharp-1.25.2-darwin-arm64/.omnisharp/1.39.2-net6.0/OmniSharp.dll", 
+            "/Users/dmitryivanov/.vscode/extensions/ms-dotnettools.csharp-1.26.0-darwin-arm64/.omnisharp/1.39.7-net6.0/OmniSharp.dll",
             '--languageserver', 
             '--hostPID', 
             tostring(vim.fn.getpid()),
@@ -37,7 +37,7 @@ M.config = function()
           ["textDocument/definition"] = require('omnisharp_extended').handler,
         },
         on_attach = function(client, bufnr)
-            vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+            -- vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
             vim.keymap.set('n', 'K', vim.lsp.buf.hover, { buffer = bufnr })
             vim.keymap.set('n', '<C-k>', ":lua vim.lsp.buf.signature_help()<cr>", { buffer = bufnr })
         end
@@ -45,7 +45,7 @@ M.config = function()
 
     lsp.rust_analyzer.setup{
         on_attach = function(client, bufnr)
-            vim.api.nvim_set_keymap('n', 'do', ":RustCodeAction<cr>", {noremap = false})
+            --vim.api.nvim_set_keymap('n', 'do', ":RustCodeAction<cr>", {noremap = false})
         end,
         settings = {
             ["rust-analyzer"] = {
