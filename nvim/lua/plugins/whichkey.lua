@@ -85,7 +85,19 @@ function lsp()
     wk.register(normal_mappings)
 end
 
--- vim.cmd("autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()")
+vim.api.nvim_create_autocmd({"BufWritePre"}, { 
+    pattern = "*.cs",
+    callback = function()
+        vim.lsp.buf.format()
+    end
+})
+
+vim.api.nvim_create_autocmd({"BufWritePre"}, { 
+    pattern = "*.ts",
+    callback = function()
+        vim.api.nvim_command("CocCommand prettier.forceFormatDocument")
+    end
+})
 
 M.config = function()
     local wk = require("which-key")

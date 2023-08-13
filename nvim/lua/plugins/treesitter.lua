@@ -8,7 +8,7 @@ M.config = function()
         ensure_installed = "all",
         auto_install = true,
         highlight = {
-            enable = false,
+            enable = true,
         },
         incremental_selection = {
             enable = true,

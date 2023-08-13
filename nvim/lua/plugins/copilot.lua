@@ -5,6 +5,12 @@ function M.config()
         suggestion = {
             auto_trigger = true,
             keymap = {
+               accept = "<C-L>",
+               accept_word = false,
+               accept_line = false,
+               next = "<M-]>",
+               prev = "<M-[>",
+               dismiss = "<C-\\>",
             },
         },
         filetypes = {
