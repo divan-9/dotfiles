@@ -39,6 +39,7 @@ function M.config()
       { name = "luasnip" },
       { name = "buffer" },
       { name = "path" },
+      { name = "conjure" },
       
     }),
     window = {

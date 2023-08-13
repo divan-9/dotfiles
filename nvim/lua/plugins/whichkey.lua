@@ -37,6 +37,8 @@ local normal_mappings  = {
         ["i"] = { ":lua vim.lsp.buf.implementation()<cr>", "Goto implementation" },
         ["d"] = { ":lua vim.lsp.buf.definition()<cr>", "Goto definitions" },
         ["D"] = { ":lua vim.lsp.buf.declaration()<cr>", "Goto definitions" },
+        ["h"] = { "^", "Go to the start of the line" },
+        ["l"] = { "$", "Go to the end of the line" },
     },
     ["d"] = {
         ["o"] = { ":lua vim.lsp.buf.code_action()<cr>", "Code actions" },

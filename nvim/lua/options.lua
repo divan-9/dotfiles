@@ -1,5 +1,6 @@
 -- options
 vim.g.mapleader = " "
+vim.g.maplocalleader = ","
 vim.opt.fixendofline = false
 vim.opt.autowrite = true
 vim.opt.langmap="ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz"
