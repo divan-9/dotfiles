@@ -131,7 +131,11 @@ M.config = function()
         },
     }
 
+
+
     lsp.tsserver.setup({})
+
+    lsp.clojure_lsp.setup({})
 end
 
 return M

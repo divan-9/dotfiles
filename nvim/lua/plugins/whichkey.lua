@@ -17,6 +17,10 @@ local normal_mappings  = {
             ["p"] = { ":e ~/.config/nvim/lua/plugins<cr>", "plugins" },
             ["r"] = { ":LspRestart<cr>", "Resart LSP server"},
         },
+        ["l"] = {
+            name = "+lsp",
+            ["f"] = { ":lua vim.lsp.buf.format()<cr>", "Format buffer" },
+        },
         ["f"] = { ":Telescope find_files hidden=true<cr>", "Find files" },
         ["o"] = { ":Telescope oldfiles<cr>", "Old files" },
         ["e"] = { ":NvimTreeToggle<cr>", "NvimTree" },
@@ -55,7 +59,11 @@ local normal_mappings  = {
 local visual_mappings = {
     ["<leader>"] = {
         ["/"] = { "<Plug>(comment_toggle_linewise_visual)", "Toggle comment" }
-    }
+    },
+    ["g"] = {
+        ["h"] = { "^", "Go to the start of the line" },
+        ["l"] = { "$", "Go to the end of the line" },
+    },
 }
 
 local normal_mappings_coc = {
@@ -89,6 +97,13 @@ end
 
 vim.api.nvim_create_autocmd({"BufWritePre"}, { 
     pattern = "*.cs",
+    callback = function()
+        vim.lsp.buf.format()
+    end
+})
+
+vim.api.nvim_create_autocmd({"BufWritePre"}, { 
+    pattern = "*.clj",
     callback = function()
         vim.lsp.buf.format()
     end

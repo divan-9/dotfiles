@@ -1,1 +1,5 @@
-return { "Olical/conjure" }
+return { 
+    "Olical/conjure",
+    dependencies = {
+    }
+}
