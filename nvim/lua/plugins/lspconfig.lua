@@ -21,7 +21,7 @@ M.config = function()
     lsp.omnisharp.setup({
         cmd = { 
             "dotnet", 
-            "/Users/dmitryivanov/.vscode/extensions/ms-dotnettools.csharp-1.26.0-darwin-arm64/.omnisharp/1.39.7-net6.0/OmniSharp.dll",
+            "/Users/dmitryivanov/omnisharp/OmniSharp.dll",
             '--languageserver', 
             '--hostPID', 
             tostring(vim.fn.getpid()),

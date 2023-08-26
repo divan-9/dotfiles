@@ -20,6 +20,7 @@ local normal_mappings  = {
         ["l"] = {
             name = "+lsp",
             ["f"] = { ":lua vim.lsp.buf.format()<cr>", "Format buffer" },
+            ["c"] = { ":ConjureConnect<cr>", "Conjure Connect"},
         },
         ["f"] = { ":Telescope find_files hidden=true<cr>", "Find files" },
         ["o"] = { ":Telescope oldfiles<cr>", "Old files" },
@@ -34,6 +35,11 @@ local normal_mappings  = {
         ["m"] = { "<cmd>lua vim.diagnostic.goto_next()<cr>", "Prev diagnostic" },
         ["g"] = { ":LazyGitCurrentFile<cr>", "Lazy Git" },
         ["F"] = { ":CocCommand prettier.forceFormatDocument<cr>", "Coc:prettier" },
+        ["b"] = {
+            name = "+buffers",
+            ["b"] = { ":Telescope buffers<cr>", "List buffers" },
+            ["d"] = { ":bd|bn<cr>", "Delete buffer" }
+        },
     },
     ["g"] = {
         ["U"] = { ":lua require('telescope.builtin').lsp_references()<cr>", "Preview usages" },
@@ -50,7 +56,7 @@ local normal_mappings  = {
     ["m"] = {
         ["k"] = { ":Dotnet<cr>", "Build dotnet solution" },
     },
-    ["<C-j>"] = { ":ToggleTerm<cr>", "Toggle Term"},
+    ["<C-j>"] = { ":2ToggleTerm<cr>", "Toggle Term"},
     ["<C-n>"] = { ":cnext<cr>", "Next Quick Fix"},
     ["<C-m>"] = { ":cprev<cr>", "Prev Quick Fix"},
     ["U"] = { "<C-r>", "Redo" },

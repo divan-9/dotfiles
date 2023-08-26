@@ -26,6 +26,7 @@ vim.api.nvim_create_autocmd("User", {
   pattern = "VeryLazy",
   callback = function()
     require("commands")
-    vim.cmd[[colorscheme nightfox]]
+    require("repl")
+    vim.cmd[[colorscheme nordfox]]
   end,
 })
