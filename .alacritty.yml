@@ -10,12 +10,15 @@ import:
 
 font:
   normal:
-    family: Fisa Code
+    # family: Fisa Code
+    family: MonoLisa
   bold:
-    family: Fisa Code
+    family: MonoLisa
+    # family: Fisa Code
     style: Bold
   italic:
-    family: Fisa Code
+    family: MonoLisa
+    # family: Fisa Code
     style: Light Italic
   size: 14
 

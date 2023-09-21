@@ -9,6 +9,8 @@ return
             vim.g.sonokai_style = "maia"
         end
     },
+    { "catppuccin/nvim" },
+    { "kamwitsta/flatwhite-vim" },
     {
         "arcticicestudio/nord-vim",
         config = function()
