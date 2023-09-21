@@ -22,31 +22,31 @@ font:
     style: Light Italic
   size: 14
 
-hints:
-  enabled:
+# hints:
+  # enabled:
     # msbuild error
-    - regex: '(/.+\.(csproj|cs|txt|sql|html|css|js|ts))(\((\d+),(\d+)\))'
-      command: dotfiles/bin/uniopen
-      mouse:
-        enabled: true
-      post_processing: true
-    # dotnet unit test log
-    - regex: '(/.+\.(csproj|cs|txt|sql|html|css|js|ts)):line (\d+)'
-      command: dotfiles/bin/uniopen
-      mouse:
-        enabled: true
-      post_processing: true
-    # common file
-    - regex: '(/.+\.(csproj|cs|txt|sql|html|css|js|ts))'
-      command: dotfiles/bin/uniopen
-      mouse:
-        enabled: true
-      post_processing: true
+    # - regex: '(/.+\.(csproj|cs|txt|sql|html|css|js|ts))(\((\d+),(\d+)\))'
+    #   command: dotfiles/bin/uniopen
+    #   mouse:
+    #     enabled: true
+    #   post_processing: true
+    # # dotnet unit test log
+    # - regex: '(/.+\.(csproj|cs|txt|sql|html|css|js|ts)):line (\d+)'
+    #   command: dotfiles/bin/uniopen
+    #   mouse:
+    #     enabled: true
+    #   post_processing: true
+    # # common file
+    # - regex: '(/.+\.(csproj|cs|txt|sql|html|css|js|ts))'
+    #   command: dotfiles/bin/uniopen
+    #   mouse:
+    #     enabled: true
+    #   post_processing: true
     # url
-    - regex: '(www|http:|https:)+[^\s]+[\w]'
-      command: dotfiles/bin/uniopen
-      mouse:
-        enabled: true
+    # - regex: '(www|http:|https:)+[^\s]+[\w]'
+    #   command: dotfiles/bin/uniopen
+    #   mouse:
+    #     enabled: true
 
 
 key_bindings:
