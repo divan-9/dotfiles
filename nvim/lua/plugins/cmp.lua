@@ -3,17 +3,17 @@ local M = {
   event = "InsertEnter",
   dependencies = {
     "hrsh7th/cmp-nvim-lsp",
+    "hrsh7th/cmp-omni",
     "hrsh7th/cmp-buffer",
     "hrsh7th/cmp-cmdline",
     "dmitmel/cmp-cmdline-history",
     "hrsh7th/cmp-path",
     "saadparwaiz1/cmp_luasnip",
   },
+  enabled = false
 }
 
 function M.config()
-  -- vim.o.completeopt = "menuone,noselect"
-
   -- Setup nvim-cmp.
   local cmp = require("cmp")
 
@@ -40,10 +40,15 @@ function M.config()
       { name = "buffer" },
       { name = "path" },
       { name = "conjure" },
-      
+      {
+        name = 'omni',
+        option = {
+          disable_omnifuncs = { 'v:lua.vim.lsp.omnifunc' }
+        }
+      }
     }),
     window = {
-        -- completion = cmp.config.window.bordered(),
+        completion = cmp.config.window.bordered(),
         documentation = cmp.config.window.bordered(),
     },
     experimental = {

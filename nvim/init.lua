@@ -27,6 +27,7 @@ vim.api.nvim_create_autocmd("User", {
   callback = function()
     require("commands")
     require("repl")
-    vim.cmd[[colorscheme nordfox]]
+    -- vim.cmd[[colorscheme nordfox]]
+    vim.cmd[[colorscheme catppuccin]]
   end,
 })

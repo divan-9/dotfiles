@@ -14,7 +14,7 @@ vim.diagnostic.config({
 })
 
 vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
-
+M.enabled = false
 M.config = function()
     local lsp = require("lspconfig")
 
@@ -37,7 +37,7 @@ M.config = function()
           ["textDocument/definition"] = require('omnisharp_extended').handler,
         },
         on_attach = function(client, bufnr)
-            -- vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+            vim.opt.completeopt = ''
             vim.keymap.set('n', 'K', vim.lsp.buf.hover, { buffer = bufnr })
             vim.keymap.set('n', '<C-k>', ":lua vim.lsp.buf.signature_help()<cr>", { buffer = bufnr })
 

@@ -1,4 +1,16 @@
 {
   "volar.takeOverMode.enabled": true,
   "tsserver.enable": false,
-}
+
+  "languageserver": {
+      "csharp-ls": {
+            "command": "dotnet",
+            "args" : [
+                "/Users/dmitryivanov/omnisharp/OmniSharp.dll",
+                "--languageserver"
+            ],
+            "filetypes": ["cs"],
+            "rootPatterns": ["*.sln"]
+        }
+  }
+} 

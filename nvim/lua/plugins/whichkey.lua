@@ -1,13 +1,8 @@
 local M = {
-    "folke/which-key.nvim",
+    "folke/which-key.nvim"
 }
 
-vim.cmd([[
-    autocmd FileType cs lua lsp()
-    autocmd FileType vue lua coc()
-    autocmd FileType ts lua coc()
-]])
-
+-- TODO: review this mappings and delete unneeded ones
 local normal_mappings  = {
     ["<leader>"] = {
         ["w"] = { ":w<cr>", "Write buffer" },
@@ -83,44 +78,17 @@ local normal_mappings_coc = {
         ["d"] = { ":<C-u>CocList diagnostics<cr>", "Coc: Diagnostics" },
         ["n"] = { ":CocNext<cr>", "Coc: Next" },
         ["m"] = { ":CocPrev<cr>", "Coc: Prev" },
+        ["C"] = {
+            name = "+COC",
+            ["l"] = { ":CocCommand workspace.showOutput<cr>", "Workspace output" },
+            ["f"] = { ":CocCommand editor.action.formatDocument<cr>", "Format document" }
+        },
     },
     ["d"] = {
         ["o"] = { "<Plug>(coc-codeaction)", "Coc: Code actions" },
     },
 }
 
-function coc()
-    local wk = require("which-key")
-    wk.register(normal_mappings_coc, {
-        buffer = vim.api.nvim_get_current_buf()
-    })
-end
-
-function lsp()
-    local wk = require("which-key")
-    wk.register(normal_mappings)
-end
-
-vim.api.nvim_create_autocmd({"BufWritePre"}, { 
-    pattern = "*.cs",
-    callback = function()
-        vim.lsp.buf.format()
-    end
-})
-
-vim.api.nvim_create_autocmd({"BufWritePre"}, { 
-    pattern = "*.clj",
-    callback = function()
-        vim.lsp.buf.format()
-    end
-})
-
-vim.api.nvim_create_autocmd({"BufWritePre"}, { 
-    pattern = "*.ts",
-    callback = function()
-        vim.api.nvim_command("CocCommand prettier.forceFormatDocument")
-    end
-})
 
 M.config = function()
     local wk = require("which-key")
@@ -130,6 +98,7 @@ M.config = function()
     })
 
     wk.register(normal_mappings)
+    wk.register(normal_mappings_coc)
     wk.register(visual_mappings, { mode = "v" })
 end
 
