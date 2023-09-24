@@ -19,7 +19,7 @@ function M.config()
 
     -- Make <CR> to accept selected completion item or notify coc.nvim to format
     -- <C-g>u breaks current undo, please make your own choice
-    vim.keymap.set("i", "<cr>", [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]], opts)
+    -- vim.keymap.set("i", "<cr>", [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]], opts)
 
     -- Use K to show documentation in preview window
     function _G.show_docs()
@@ -42,31 +42,11 @@ function M.config()
     })
 
     vim.api.nvim_create_autocmd({"BufWritePre"}, { 
-        pattern = "*.ts",
+        pattern = "*.ts, *.js",
         callback = function()
-            vim.fn.CocActionAsync('prettier.forceFormatDocument')
-        end
-    })
-
-    -- special hack to fetch metadata from omnisharp
-    -- TODO: create a plugin for this
-    vim.api.nvim_create_autocmd({"BufNewFile"}, {
-        pattern = "*.cs",
-        callback = function()
-
-            function string.starts(String,Start)
-               return string.sub(String,1,string.len(Start))==Start
-            end
-
-            local current_file = vim.fn.expand('%:p')
-
-            if string.starts(current_file, "/$metadata$/") then
-                print("X:"..current_file)
-                -- TODO: complete this
-                -- TODO: https://github.com/Hoffs/omnisharp-extended-lsp.nvim/blob/main/lua/omnisharp_extended.lua
-                -- TODO: find a way to get text of the file from the omnisharp server
-                -- TODO: populate the buffer with this text
-            end
+            vim.cmd[[
+                :call coc#rpc#notify('runCommand', ['prettier.formatFile'])
+            ]]
         end
     })
 end

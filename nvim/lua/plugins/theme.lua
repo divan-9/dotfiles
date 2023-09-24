@@ -3,6 +3,7 @@ return
     { "ful1e5/onedark.nvim" },
     { "EdenEast/nightfox.nvim" },
     { "aktersnurra/no-clown-fiesta.nvim" },
+    { "rebelot/kanagawa.nvim" },
     {
         "sainnhe/sonokai",
         config = function()

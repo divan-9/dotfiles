@@ -1,3 +1,7 @@
+-- vim.cmd[[
+--     let g:coc_node_args = ['--nolazy', '--inspect-brk=5858']
+-- ]]
+
 require("options")
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -12,7 +16,6 @@ if not vim.loop.fs_stat(lazypath) then
     lazypath,
   })
 end
-
 vim.opt.runtimepath:prepend(lazypath)
 
 require("lazy").setup("plugins", {
@@ -28,6 +31,8 @@ vim.api.nvim_create_autocmd("User", {
     require("commands")
     require("repl")
     -- vim.cmd[[colorscheme nordfox]]
-    vim.cmd[[colorscheme catppuccin]]
+    vim.cmd[[colorscheme catppuccin-latte]]
+    -- vim.cmd[[colorscheme kanagawa-wave]]
   end,
 })
+
