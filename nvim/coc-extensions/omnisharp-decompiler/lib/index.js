@@ -33,9 +33,6 @@ function createMiddleware(client) {
       if (import_coc.Location.is(result)) {
         const metadataUri = parseMetaUri(result.uri);
         if (metadataUri) {
-          printMessage(
-            `Metadata file detected: Project=${metadataUri.project} Assembly=${metadataUri.assembly} Symbol=${metadataUri.symbol}`
-          );
           const metadataRequest = {
             Timeout: 5e3,
             AssemblyName: metadataUri.assembly,
@@ -45,9 +42,15 @@ function createMiddleware(client) {
           const metadataResponse = await client.sendRequest("o#/metadata", metadataRequest);
           const source = metadataResponse.Source;
           const buffer = await import_coc.workspace.nvim.createNewBuffer(false, true);
-          buffer.setName(`METADATA`);
-          await import_coc.workspace.nvim.command(`buffer ${buffer.id}`);
-          await buffer.setLines(source.split("\n"), { start: 0, end: -1, strictIndexing: false });
+          buffer.name(metadataUri.fileName);
+          await buffer.setLines(source.split("\n"), { start: 0, end: -1 });
+          await buffer.setOption("filetype", "csharp");
+          await buffer.setOption("buftype", "nofile");
+          await buffer.setOption("modifiable", false);
+          await buffer.setOption("readonly", true);
+          import_coc.workspace.nvim.setBuffer(buffer);
+          import_coc.workspace.nvim.command(`write! ${metadataUri.fileName}`);
+          result.uri = metadataUri.fileName;
         }
       } else {
         printMessage(`TODO: handle this case when result is not Location`);
@@ -60,7 +63,8 @@ function parseMetaUri(uri) {
   if (!uri) {
     return void 0;
   }
-  const parts = decodeURIComponent(uri).split("/");
+  const normalizedUri = decodeURIComponent(uri);
+  const parts = normalizedUri.split("/");
   if (parts.length < 4 || parts[3] !== "$metadata$") {
     return void 0;
   }
@@ -96,10 +100,12 @@ function parseMetaUri(uri) {
         }
     }
   }
+  const fileName = `/tmp/coc-omnisharp-metadata/${process.pid}/${normalizedUri.replace("file:///$metadata$/", "")}`;
   return {
     project: project.join("."),
     assembly: assembly.join("."),
-    symbol: symbol.join(".").replace(/\.cs$/g, "")
+    symbol: symbol.join(".").replace(/\.cs$/g, ""),
+    fileName
   };
 }
 async function activate(context) {

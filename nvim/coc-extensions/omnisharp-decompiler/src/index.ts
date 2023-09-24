@@ -32,9 +32,9 @@ function createMiddleware(client: LanguageClient) {
         const metadataUri = parseMetaUri(result.uri);
 
         if (metadataUri) {
-          printMessage(
-            `Metadata file detected: Project=${metadataUri.project} Assembly=${metadataUri.assembly} Symbol=${metadataUri.symbol}`
-          );
+          // printMessage(
+          //   `Metadata file detected: FileName=${metadataUri.fileName} Project=${metadataUri.project} Assembly=${metadataUri.assembly} Symbol=${metadataUri.symbol}`
+          // );
 
           const metadataRequest = {
             Timeout: 5000,
@@ -47,9 +47,18 @@ function createMiddleware(client: LanguageClient) {
 
           const source = metadataResponse.Source;
           const buffer = await workspace.nvim.createNewBuffer(false, true);
-          buffer.setName(`METADATA`);
-          await workspace.nvim.command(`buffer ${buffer.id}`);
-          await buffer.setLines(source.split('\n'), { start: 0, end: -1, strictIndexing: false });
+          buffer.name(metadataUri.fileName);
+          await buffer.setLines(source.split('\n'), { start: 0, end: -1 });
+          await buffer.setOption('filetype', 'csharp');
+          await buffer.setOption('buftype', 'nofile');
+          await buffer.setOption('modifiable', false);
+          await buffer.setOption('readonly', true);
+          workspace.nvim.setBuffer(buffer);
+
+          //write buffer to disc
+          workspace.nvim.command(`write! ${metadataUri.fileName}`);
+
+          result.uri = metadataUri.fileName;
         }
       } else {
         printMessage(`TODO: handle this case when result is not Location`);
@@ -71,8 +80,9 @@ function parseMetaUri(uri: string | undefined): MetadataUri | undefined {
     return undefined;
   }
 
+  const normalizedUri = decodeURIComponent(uri);
   // TODO: test and fix on windows
-  const parts = decodeURIComponent(uri).split('/');
+  const parts = normalizedUri.split('/');
 
   if (parts.length < 4 || parts[3] !== '$metadata$') {
     return undefined;
@@ -114,10 +124,13 @@ function parseMetaUri(uri: string | undefined): MetadataUri | undefined {
     }
   }
 
+  const fileName = `/tmp/coc-omnisharp-metadata/${process.pid}/${normalizedUri.replace('file:///$metadata$/', '')}`;
+
   return {
     project: project.join('.'),
     assembly: assembly.join('.'),
     symbol: symbol.join('.').replace(/\.cs$/g, ''),
+    fileName: fileName,
   };
 }
 
