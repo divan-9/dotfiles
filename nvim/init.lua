@@ -31,7 +31,7 @@ vim.api.nvim_create_autocmd("User", {
     require("commands")
     require("repl")
     -- vim.cmd[[colorscheme nordfox]]
-    vim.cmd[[colorscheme catppuccin-latte]]
+    vim.cmd[[colorscheme dayfox]]
     -- vim.cmd[[colorscheme kanagawa-wave]]
   end,
 })
