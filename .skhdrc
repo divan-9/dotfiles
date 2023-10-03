@@ -9,9 +9,11 @@
 #    "safari": false
 #]
 
-rcmd - c: open /Applications/Visual\ Studio\ Code.app
+rcmd - c: open /Applications/Cron.app
+rcmd - m: open /System/Applications/Mail.app
 # rcmd - t: open /Applications/iTerm.app
 rcmd - t: open /Applications/Alacritty.app
+rcmd - a: open /Applications/Anki.app
 # rcmd - t: open /Applications/Kitty.app
 rcmd - s: open /Applications/Firefox.app
 rcmd - l: open /Applications/Slack.app
@@ -25,7 +27,7 @@ rcmd - o: open /Applications/Obsidian.app
 
 
 # Navigation
-alt - h : yabai -m window --focus west
-alt - j : yabai -m window --focus south
-alt - k : yabai -m window --focus north
-alt - l : yabai -m window --focus east
+# alt - h : yabai -m window --focus west
+# alt - j : yabai -m window --focus south
+# alt - k : yabai -m window --focus north
+# alt - l : yabai -m window --focus east
