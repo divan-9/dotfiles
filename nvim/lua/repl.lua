@@ -18,8 +18,11 @@ local repl = Terminal:new({
   end,
 })
 
-function _repl_toggle()
-  repl:toggle()
-end
-
-vim.api.nvim_set_keymap("n", "<leader>lr", "<cmd>lua _repl_toggle()<CR>", {noremap = true, silent = true})
+-- TODO: delete this file
+vim.api.nvim_create_user_command(
+    "EnsureReplAndReconnect",
+    function(opts)
+        repl:toggle()
+    end,
+    { nargs = 0 }
+)

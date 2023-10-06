@@ -2,6 +2,8 @@ local M = {
     "folke/which-key.nvim",
 }
 
+local uuid = require('uuid-nvim')
+
 vim.cmd([[
     autocmd FileType cs lua lsp()
     autocmd FileType vue lua coc()
@@ -10,6 +12,10 @@ vim.cmd([[
 
 local normal_mappings  = {
     ["<leader>"] = {
+        ["i"] = { 
+            name = "+insert",
+            ["g"] = {  uuid.insert_v4, "GUID" }
+        },
         ["w"] = { ":w<cr>", "Write buffer" },
         ["L"] = {
             name = "+configs",
@@ -21,6 +27,7 @@ local normal_mappings  = {
             name = "+lsp",
             ["f"] = { ":lua vim.lsp.buf.format()<cr>", "Format buffer" },
             ["c"] = { ":ConjureConnect<cr>", "Conjure Connect"},
+            ["r"] = { ":Lein", "Start lein repl using vim-jack-in" }
         },
         ["f"] = { ":Telescope find_files hidden=true<cr>", "Find files" },
         ["o"] = { ":Telescope oldfiles<cr>", "Old files" },
@@ -40,6 +47,15 @@ local normal_mappings  = {
             ["b"] = { ":Telescope buffers<cr>", "List buffers" },
             ["d"] = { ":bd|bn<cr>", "Delete buffer" }
         },
+        ["t"] = {
+            name = "+tabs",
+            ["t"] = { ":tabnew<cr>", "New tab" },
+            ["n"] = { ":tabnext<cr>", "Next tab" },
+            ["p"] = { ":tabprevious<cr>", "Previous tab" },
+            ["c"] = { ":tabclose<cr>", "Close tab" },
+            ["1"] = { ":tabfirst<cr>", "First tab" },
+            ["2"] = { ":tablast<cr>", "Last tab" },
+        }
     },
     ["g"] = {
         ["U"] = { ":lua require('telescope.builtin').lsp_references()<cr>", "Preview usages" },

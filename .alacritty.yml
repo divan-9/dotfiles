@@ -10,16 +10,20 @@ import:
 
 font:
   normal:
+    family: FiraCode Nerd Font
     # family: Fisa Code
-    family: MonoLisa
+    # family: MonoLisa
+    style: Retina
   bold:
-    family: MonoLisa
+    family: FiraCode Nerd Font
+    # family: MonoLisa
     # family: Fisa Code
     style: Bold
   italic:
-    family: MonoLisa
+    family: FiraCode Nerd Font
+    # family: MonoLisa
     # family: Fisa Code
-    style: Light Italic
+    style: Light
   size: 14
 
 # hints:

@@ -1,4 +1,5 @@
 return {
+    {"TrevorS/uuid-nvim"},
     { 
         "folke/neoconf.nvim", 
         cmd = "Neoconf" 
