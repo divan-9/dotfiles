@@ -27,6 +27,7 @@ vim.opt.grepprg = "rg --vimgrep"
 vim.opt.grepformat = "%f:%l:%c:%m"
 vim.o.updatetime = 250
 vim.opt.scrolloff = 5
+vim.o.signcolumn = "number"
 
 -- Position the (global) quickfix window at the very bottom of the window
 -- (useful for making sure that it appears underneath splits)
