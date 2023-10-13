@@ -15,18 +15,11 @@ end
 
 vim.opt.runtimepath:prepend(lazypath)
 
-require("lazy").setup("plugins", {
-    cache = {
-        enabled = false,
-    },
-    install = { colorscheme = { "sonokai", "nord" } },
-})
+require("lazy").setup("plugins", {})
 
 vim.api.nvim_create_autocmd("User", {
   pattern = "VeryLazy",
   callback = function()
     require("commands")
-    require("repl")
-    vim.cmd[[colorscheme sonokai]]
-  end,
+  end
 })

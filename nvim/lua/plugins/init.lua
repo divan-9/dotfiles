@@ -19,5 +19,16 @@ return {
     },
     {
         "kdheepak/lazygit.nvim",
-    }
+    },
+    { "EdenEast/nightfox.nvim" },
+    {
+        "sainnhe/sonokai",
+        lazy = false,
+        priority = 1000,
+        config = function()
+            vim.g.sonokai_style = "maia"
+            vim.cmd([[colorscheme sonokai]])
+        end
+    },
+    { "catppuccin/nvim" },
 }

@@ -4,14 +4,16 @@ local M = {
 
 local uuid = require('uuid-nvim')
 
-vim.cmd([[
-    autocmd FileType cs lua lsp()
-    autocmd FileType vue lua coc()
-    autocmd FileType ts lua coc()
-]])
-
 local normal_mappings  = {
     ["<leader>"] = {
+        ["r"] = { "<Plug>(coc-rename)", "Coc: Rename" },
+        -- ["r"] = { ":lua vim.lsp.buf.rename()<cr>", "Rename" },
+        ["d"] = { ":<C-u>CocList diagnostics<cr>", "Coc: Diagnostics" },
+        -- ["d"] = { ":Diag<cr>", "Diagnostics" },
+        ["n"] = { ":CocNext<cr>", "Coc: Next" },
+        ["m"] = { ":CocPrev<cr>", "Coc: Prev" },
+        -- ["n"] = { "<cmd>lua vim.diagnostic.goto_prev()<cr>", "Next diagnostic" },
+        -- ["m"] = { "<cmd>lua vim.diagnostic.goto_next()<cr>", "Prev diagnostic" },
         ["i"] = { 
             name = "+insert",
             ["g"] = {  uuid.insert_v4, "GUID" }
@@ -32,14 +34,10 @@ local normal_mappings  = {
         ["f"] = { ":Telescope find_files hidden=true<cr>", "Find files" },
         ["o"] = { ":Telescope oldfiles<cr>", "Old files" },
         ["e"] = { ":NvimTreeToggle<cr>", "NvimTree" },
-        ["r"] = { ":lua vim.lsp.buf.rename()<cr>", "Rename" },
         ["h"] = { ":nohl<cr>", "Nohl" },
         ["/"] = { "<Plug>(comment_toggle_linewise_current)", "Toggle comment" },
         ["q"] = { ":cclose<cr>", "Close Quick Fix List" },
         ["<cr>"] = { ":cc<cr>", "Goto Quick Fix Entry" },
-        ["d"] = { ":Diag<cr>", "Diagnostics" },
-        ["n"] = { "<cmd>lua vim.diagnostic.goto_prev()<cr>", "Next diagnostic" },
-        ["m"] = { "<cmd>lua vim.diagnostic.goto_next()<cr>", "Prev diagnostic" },
         ["g"] = { ":LazyGitCurrentFile<cr>", "Lazy Git" },
         ["F"] = { ":CocCommand prettier.forceFormatDocument<cr>", "Coc:prettier" },
         ["b"] = {
@@ -58,16 +56,20 @@ local normal_mappings  = {
         }
     },
     ["g"] = {
-        ["U"] = { ":lua require('telescope.builtin').lsp_references()<cr>", "Preview usages" },
-        ["u"] = { ":lua vim.lsp.buf.references()<cr>", "Goto usages" },
-        ["i"] = { ":lua vim.lsp.buf.implementation()<cr>", "Goto implementation" },
-        ["d"] = { ":lua vim.lsp.buf.definition()<cr>", "Goto definitions" },
-        ["D"] = { ":lua vim.lsp.buf.declaration()<cr>", "Goto definitions" },
+        ["u"] = {"<Plug>(coc-references)", "Coc: Goto usages"},
+        ["i"] = {"<Plug>(coc-implementation)", "Coc: Goto implementation"},
+        ["d"] = {"<Plug>(coc-definition)", "Coc: Goto definition"},
+        -- ["U"] = { ":lua require('telescope.builtin').lsp_references()<cr>", "Preview usages" },
+        -- ["u"] = { ":lua vim.lsp.buf.references()<cr>", "Goto usages" },
+        -- ["i"] = { ":lua vim.lsp.buf.implementation()<cr>", "Goto implementation" },
+        -- ["d"] = { ":lua vim.lsp.buf.definition()<cr>", "Goto definitions" },
+        -- ["D"] = { ":lua vim.lsp.buf.declaration()<cr>", "Goto definitions" },
         ["h"] = { "^", "Go to the start of the line" },
         ["l"] = { "$", "Go to the end of the line" },
     },
     ["d"] = {
-        ["o"] = { ":lua vim.lsp.buf.code_action()<cr>", "Code actions" },
+        -- ["o"] = { ":lua vim.lsp.buf.code_action()<cr>", "Code actions" },
+        ["o"] = { "<Plug>(coc-codeaction)", "Coc: Code actions" },
     },
     ["m"] = {
         ["k"] = { ":Dotnet<cr>", "Build dotnet solution" },
@@ -88,35 +90,7 @@ local visual_mappings = {
     },
 }
 
-local normal_mappings_coc = {
-    ["g"] = {
-        ["u"] = {"<Plug>(coc-references)", "Coc: Goto usages"},
-        ["i"] = {"<Plug>(coc-implementation)", "Coc: Goto implementation"},
-        ["d"] = {"<Plug>(coc-definition)", "Coc: Goto definition"},
-    },
-    ["<leader>"] = {
-        ["r"] = { "<Plug>(coc-rename)", "Coc: Rename" },
-        ["d"] = { ":<C-u>CocList diagnostics<cr>", "Coc: Diagnostics" },
-        ["n"] = { ":CocNext<cr>", "Coc: Next" },
-        ["m"] = { ":CocPrev<cr>", "Coc: Prev" },
-    },
-    ["d"] = {
-        ["o"] = { "<Plug>(coc-codeaction)", "Coc: Code actions" },
-    },
-}
-
-function coc()
-    local wk = require("which-key")
-    wk.register(normal_mappings_coc, {
-        buffer = vim.api.nvim_get_current_buf()
-    })
-end
-
-function lsp()
-    local wk = require("which-key")
-    wk.register(normal_mappings)
-end
-
+-- TODO: delete
 vim.api.nvim_create_autocmd({"BufWritePre"}, { 
     pattern = "*.cs",
     callback = function()
@@ -124,6 +98,7 @@ vim.api.nvim_create_autocmd({"BufWritePre"}, {
     end
 })
 
+-- TODO: delete
 vim.api.nvim_create_autocmd({"BufWritePre"}, { 
     pattern = "*.clj,*.edn",
     callback = function()
@@ -131,8 +106,9 @@ vim.api.nvim_create_autocmd({"BufWritePre"}, {
     end
 })
 
+-- TODO: delete
 vim.api.nvim_create_autocmd({"BufWritePre"}, { 
-    pattern = "*.ts",
+    pattern = "*.ts,*.json",
     callback = function()
         vim.api.nvim_command("CocCommand prettier.forceFormatDocument")
     end

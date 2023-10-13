@@ -1,4 +1,15 @@
 {
   "volar.takeOverMode.enabled": true,
   "tsserver.enable": false,
+  "languageserver": {
+    "omnisharp": {
+      "command": "dotnet",
+      "args": [
+        "/Users/dmitryivanov/omnisharp-osx-arm64-net6/OmniSharp.dll",
+        "--languageserver"
+      ],
+      "filetypes": ["cs"],
+      "rootPatterns": ["*.sln"]
+    }
+  }
 }

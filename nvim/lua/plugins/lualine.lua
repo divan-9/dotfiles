@@ -3,6 +3,8 @@ local M = { "hoob3rt/lualine.nvim" }
 M.dependencies = {
 }
 
+M.lazy = false
+
 local opts = {
   options = {
     icons_enabled = true,

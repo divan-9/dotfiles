@@ -1,5 +1,6 @@
 local Job = require 'plenary.job'
 local Path = require 'plenary.path'
+
 -- Custom Rg commad (grep in dir)
 vim.api.nvim_create_user_command(
   'Rg',
@@ -84,13 +85,4 @@ vim.api.nvim_create_user_command(
     job:start()
   end,
   { nargs = "?" }
-)
-
-vim.api.nvim_create_user_command(
-    "Diag",
-    function(opts)
-        local t = require("telescope_diagnostics")
-        t.get()
-    end,
-    { nargs = 0 }
 )
