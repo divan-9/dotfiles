@@ -1,13 +1,12 @@
 local M = { "hoob3rt/lualine.nvim" }
 
 M.dependencies = {
-    "sainnhe/sonokai"
 }
 
 local opts = {
   options = {
     icons_enabled = true,
-    theme = 'sonokai',
+    theme = 'auto',
     component_separators = {'', ''},
     section_separators = {'', ''},
     disabled_filetypes = {}

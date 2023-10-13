@@ -125,7 +125,7 @@ vim.api.nvim_create_autocmd({"BufWritePre"}, {
 })
 
 vim.api.nvim_create_autocmd({"BufWritePre"}, { 
-    pattern = "*.clj",
+    pattern = "*.clj,*.edn",
     callback = function()
         vim.lsp.buf.format()
     end
