@@ -1,6 +1,26 @@
 {
   "volar.takeOverMode.enabled": true,
-  "tsserver.enable": false,
+  "[cs][lua][clj][edn]": {
+    "coc.preferences.formatOnSave": true
+  },
+  "diagnostic.errorSign": "✘",
+  "diagnostic.infoSign": "ℹ",
+  "diagnostic.hintSign": "➤",
+  "diagnostic.enableHighlightLineNumber": true,
+  "codeLens.enable": true,
+  "signature.enable": true,
+  "coc.preferences.useQuickfixForLocations": true,
+  "diagnostic.separateRelatedInformationAsDiagnostics": true,
+  "diagnostic.virtualText": false,
+  "diagnostic.format": "%message [%source]",
+  "hover.floatConfig": {
+    "border": true,
+    "rounded": true
+  },
+  "suggest.floatConfig": {
+    "border": true,
+    "rounded": true
+  },
   "languageserver": {
     "omnisharp": {
       "command": "dotnet",

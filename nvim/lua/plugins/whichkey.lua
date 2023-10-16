@@ -1,10 +1,10 @@
-local M = {
+local M               = {
     "folke/which-key.nvim",
 }
 
-local uuid = require('uuid-nvim')
+local uuid            = require('uuid-nvim')
 
-local normal_mappings  = {
+local normal_mappings = {
     ["<leader>"] = {
         ["r"] = { "<Plug>(coc-rename)", "Coc: Rename" },
         -- ["r"] = { ":lua vim.lsp.buf.rename()<cr>", "Rename" },
@@ -14,21 +14,22 @@ local normal_mappings  = {
         ["m"] = { ":CocPrev<cr>", "Coc: Prev" },
         -- ["n"] = { "<cmd>lua vim.diagnostic.goto_prev()<cr>", "Next diagnostic" },
         -- ["m"] = { "<cmd>lua vim.diagnostic.goto_next()<cr>", "Prev diagnostic" },
-        ["i"] = { 
+        ["i"] = {
             name = "+insert",
-            ["g"] = {  uuid.insert_v4, "GUID" }
+            ["g"] = { uuid.insert_v4, "GUID" }
         },
         ["w"] = { ":w<cr>", "Write buffer" },
         ["L"] = {
             name = "+configs",
             ["c"] = { ":e ~/.config/nvim/init.lua<cr>", "init.lua" },
             ["p"] = { ":e ~/.config/nvim/lua/plugins<cr>", "plugins" },
-            ["r"] = { ":LspRestart<cr>", "Resart LSP server"},
+            ["r"] = { ":LspRestart<cr>", "Resart LSP server" },
         },
         ["l"] = {
             name = "+lsp",
-            ["f"] = { ":lua vim.lsp.buf.format()<cr>", "Format buffer" },
-            ["c"] = { ":ConjureConnect<cr>", "Conjure Connect"},
+            -- ["f"] = { ":lua vim.lsp.buf.format()<cr>", "Format buffer" },
+            ["f"] = { "<Plug>(coc-format)", "Coc: Format" },
+            ["c"] = { ":ConjureConnect<cr>", "Conjure Connect" },
             ["r"] = { ":Lein", "Start lein repl using vim-jack-in" }
         },
         ["f"] = { ":Telescope find_files hidden=true<cr>", "Find files" },
@@ -56,9 +57,9 @@ local normal_mappings  = {
         }
     },
     ["g"] = {
-        ["u"] = {"<Plug>(coc-references)", "Coc: Goto usages"},
-        ["i"] = {"<Plug>(coc-implementation)", "Coc: Goto implementation"},
-        ["d"] = {"<Plug>(coc-definition)", "Coc: Goto definition"},
+        ["u"] = { "<Plug>(coc-references)", "Coc: Goto usages" },
+        ["i"] = { "<Plug>(coc-implementation)", "Coc: Goto implementation" },
+        ["d"] = { "<Plug>(coc-definition)", "Coc: Goto definition" },
         -- ["U"] = { ":lua require('telescope.builtin').lsp_references()<cr>", "Preview usages" },
         -- ["u"] = { ":lua vim.lsp.buf.references()<cr>", "Goto usages" },
         -- ["i"] = { ":lua vim.lsp.buf.implementation()<cr>", "Goto implementation" },
@@ -74,9 +75,10 @@ local normal_mappings  = {
     ["m"] = {
         ["k"] = { ":Dotnet<cr>", "Build dotnet solution" },
     },
-    ["<C-j>"] = { ":2ToggleTerm<cr>", "Toggle Term"},
-    ["<C-n>"] = { ":cnext<cr>", "Next Quick Fix"},
-    ["<C-m>"] = { ":cprev<cr>", "Prev Quick Fix"},
+    ["<C-j>"] = { ":2ToggleTerm<cr>", "Toggle Term" },
+    ["<C-e>"] = { ":NvimTreeToggle<cr>", "NvimTree" },
+    ["<C-n>"] = { ":cnext<cr>", "Next Quick Fix" },
+    ["<C-m>"] = { ":cprev<cr>", "Prev Quick Fix" },
     ["U"] = { "<C-r>", "Redo" },
 }
 
@@ -91,23 +93,23 @@ local visual_mappings = {
 }
 
 -- TODO: delete
-vim.api.nvim_create_autocmd({"BufWritePre"}, { 
-    pattern = "*.cs",
-    callback = function()
-        vim.lsp.buf.format()
-    end
-})
+-- vim.api.nvim_create_autocmd({"BufWritePre"}, {
+--     pattern = "*.cs,*.lua",
+--     callback = function()
+--         vim.lsp.buf.format()
+--     end
+-- })
 
 -- TODO: delete
-vim.api.nvim_create_autocmd({"BufWritePre"}, { 
-    pattern = "*.clj,*.edn",
-    callback = function()
-        vim.lsp.buf.format()
-    end
-})
+-- vim.api.nvim_create_autocmd({"BufWritePre"}, {
+--     pattern = "*.clj,*.edn",
+--     callback = function()
+--         vim.lsp.buf.format()
+--     end
+-- })
 
 -- TODO: delete
-vim.api.nvim_create_autocmd({"BufWritePre"}, { 
+vim.api.nvim_create_autocmd({ "BufWritePre" }, {
     pattern = "*.ts,*.json",
     callback = function()
         vim.api.nvim_command("CocCommand prettier.forceFormatDocument")
@@ -118,7 +120,7 @@ M.config = function()
     local wk = require("which-key")
 
     wk.setup({
-      key_labels = { ["<leader>"] = "SPC" },
+        key_labels = { ["<leader>"] = "SPC" },
     })
 
     wk.register(normal_mappings)
