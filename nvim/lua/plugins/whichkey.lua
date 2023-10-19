@@ -1,17 +1,26 @@
 local M               = {
     "folke/which-key.nvim",
+    lazy = false,
 }
 
 local uuid            = require('uuid-nvim')
 
 local normal_mappings = {
+    ["]"] = {
+        ["g"] = { "<Plug>(coc-diagnostic-next)", "Next diagnostic" },
+        ["d"] = { ":CocNext diagnostics<cr>", "CocNext diagnostics" }
+    },
+    ["["] = {
+        ["g"] = { "<Plug>(coc-diagnostic-prev)", "Prev diagnostic" },
+        ["d"] = { ":CocPrev diagnostics<cr>", "CocPrev diagnostics" }
+    },
     ["<leader>"] = {
         ["r"] = { "<Plug>(coc-rename)", "Coc: Rename" },
         -- ["r"] = { ":lua vim.lsp.buf.rename()<cr>", "Rename" },
         ["d"] = { ":<C-u>CocList diagnostics<cr>", "Coc: Diagnostics" },
         -- ["d"] = { ":Diag<cr>", "Diagnostics" },
-        ["n"] = { ":CocNext<cr>", "Coc: Next" },
-        ["m"] = { ":CocPrev<cr>", "Coc: Prev" },
+        -- ["n"] = { ":CocNext<cr>", "Coc: Next" },
+        -- ["m"] = { ":CocPrev<cr>", "Coc: Prev" },
         -- ["n"] = { "<cmd>lua vim.diagnostic.goto_prev()<cr>", "Next diagnostic" },
         -- ["m"] = { "<cmd>lua vim.diagnostic.goto_next()<cr>", "Prev diagnostic" },
         ["i"] = {
@@ -32,6 +41,9 @@ local normal_mappings = {
             ["c"] = { ":ConjureConnect<cr>", "Conjure Connect" },
             ["r"] = { ":Lein", "Start lein repl using vim-jack-in" }
         },
+        ["s"] = {
+            ["s"] = { ":Telescope live_grep<cr>", "Live grep" }
+        },
         ["f"] = { ":Telescope find_files hidden=true<cr>", "Find files" },
         ["o"] = { ":Telescope oldfiles<cr>", "Old files" },
         ["e"] = { ":NvimTreeToggle<cr>", "NvimTree" },
@@ -39,7 +51,7 @@ local normal_mappings = {
         ["/"] = { "<Plug>(comment_toggle_linewise_current)", "Toggle comment" },
         ["q"] = { ":cclose<cr>", "Close Quick Fix List" },
         ["<cr>"] = { ":cc<cr>", "Goto Quick Fix Entry" },
-        ["g"] = { ":LazyGitCurrentFile<cr>", "Lazy Git" },
+        ["g"] = { ":G<cr>", "Fugitive" },
         ["F"] = { ":CocCommand prettier.forceFormatDocument<cr>", "Coc:prettier" },
         ["b"] = {
             name = "+buffers",

@@ -3,8 +3,9 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = ","
 vim.opt.fixendofline = false
 vim.opt.autowrite = true
-vim.opt.langmap="ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz"
-vim.opt.encoding="utf-8"
+vim.opt.langmap =
+"ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz"
+vim.opt.encoding = "utf-8"
 vim.opt.wrap = false
 vim.opt.number = true
 vim.opt.splitbelow = true
@@ -23,8 +24,6 @@ vim.opt.mouse = "a"
 vim.opt.clipboard = "unnamedplus"
 vim.opt.termguicolors = true
 vim.opt.background = "dark"
-vim.opt.grepprg = "rg --vimgrep"
-vim.opt.grepformat = "%f:%l:%c:%m"
 vim.o.updatetime = 250
 vim.opt.scrolloff = 5
 vim.o.signcolumn = "number"
@@ -33,7 +32,7 @@ vim.o.signcolumn = "number"
 -- (useful for making sure that it appears underneath splits)
 -- NOTE: Using a check here to make sure that window-specific location-lists
 -- aren't effected, as they use the same `FileType` as quickfix-lists.
-vim.cmd[[
+vim.cmd [[
     autocmd FileType qf if (getwininfo(win_getid())[0].loclist != 1) | wincmd J | endif")
 ]]
 
@@ -41,4 +40,3 @@ vim.cmd [[
     autocmd FileType html setlocal shiftwidth=2 tabstop=2
     autocmd FileType vue setlocal shiftwidth=2 tabstop=2
 ]]
-

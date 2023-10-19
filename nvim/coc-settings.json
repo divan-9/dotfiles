@@ -1,19 +1,23 @@
 {
   "volar.takeOverMode.enabled": true,
-  "[cs][lua][clj][edn]": {
+  "[cs][lua][clj][edn][clojure]": {
     "coc.preferences.formatOnSave": true
   },
   "diagnostic.errorSign": "✘",
   "diagnostic.infoSign": "ℹ",
   "diagnostic.hintSign": "➤",
   "diagnostic.enableHighlightLineNumber": true,
-  "codeLens.enable": true,
+  "codeLens.enable": false,
   "signature.enable": true,
   "coc.preferences.useQuickfixForLocations": true,
   "diagnostic.separateRelatedInformationAsDiagnostics": true,
   "diagnostic.virtualText": false,
   "diagnostic.format": "%message [%source]",
   "hover.floatConfig": {
+    "border": true,
+    "rounded": true
+  },
+  "diagnostic.floatConfig": {
     "border": true,
     "rounded": true
   },
@@ -26,8 +30,7 @@
       "command": "dotnet",
       "args": [
         "/Users/dmitryivanov/omnisharp-osx-arm64-net6/OmniSharp.dll",
-        "--languageserver",
-        "-v"
+        "--languageserver"
       ],
       "filetypes": ["cs"],
       "rootPatterns": ["*.sln"]
