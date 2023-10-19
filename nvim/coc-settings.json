@@ -26,7 +26,8 @@
       "command": "dotnet",
       "args": [
         "/Users/dmitryivanov/omnisharp-osx-arm64-net6/OmniSharp.dll",
-        "--languageserver"
+        "--languageserver",
+        "-v"
       ],
       "filetypes": ["cs"],
       "rootPatterns": ["*.sln"]

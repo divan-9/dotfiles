@@ -70,7 +70,8 @@ local normal_mappings = {
     },
     ["d"] = {
         -- ["o"] = { ":lua vim.lsp.buf.code_action()<cr>", "Code actions" },
-        ["o"] = { "<Plug>(coc-codeaction)", "Coc: Code actions" },
+        ["o"] = { "<Plug>(coc-codeaction-cursor)", "Coc: Code actions" },
+        ["r"] = { "<Plug>(coc-codeaction-refactor)", "Coc: Code actions refactor" },
     },
     ["m"] = {
         ["k"] = { ":Dotnet<cr>", "Build dotnet solution" },
