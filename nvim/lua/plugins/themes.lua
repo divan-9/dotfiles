@@ -13,8 +13,21 @@ return {
         lazy = false,
         priority = 1000,
         config = function()
+            local palette = {
+                sumiInk6 = "#54546D"
+            }
+
             require('kanagawa').setup({
                 compile = false,
+                colors = {
+                    theme = {
+                        wave = {
+                            ui = {
+                                bg_visual = palette.sumiInk6
+                            }
+                        }
+                    }
+                },
                 overrides = function(colors)
                     local theme = colors.theme
                     return {
@@ -67,7 +80,7 @@ return {
                 end
             })
 
-            vim.cmd([[colorscheme kanagawa-lotus]])
+            vim.cmd([[colorscheme kanagawa-wave]])
         end
     },
     {
