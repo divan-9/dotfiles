@@ -22,14 +22,52 @@ return {
                         FloatBorder = { bg = "none" },
                         FloatTitle = { bg = "none" },
                         NormalDark = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m3 },
-                        -- LightspeedShortcut = { fg = theme.syn.keyword, bold = true },
-                        -- LightspeedLabel = { fg = theme.syn.keyword },
-                        -- LightspeedUniqueChar = { fg = theme.syn.keyword, bold = true },
+                        LightspeedLabel = {
+                            fg = theme.syn.string,
+                            bold = true,
+                            underline = true,
+                            bg = theme.ui.bg_search
+                        },
+                        LightspeedLabelDistant = {
+                            fg = theme.syn.number,
+                            bold = true,
+                            underline = true,
+                            bg = theme.ui.bg_search
+                        },
+                        LightspeedShortcut = {
+                            fg = theme.syn.identifier,
+                            bold = true,
+                            underline = true,
+                            bg = theme.ui.bg_search
+                        },
+                        LightspeedMaskedChar = {
+                            fg = theme.syn.parameter,
+                            bold = true,
+                            underline = true,
+                            bg = theme.ui.bg_search
+                        },
+                        LightspeedUnlabeledMatch = {
+                            fg = theme.syn.fun,
+                            bold = true,
+                            underline = true,
+                            bg = theme.ui.bg_search
+                        },
+                        LightspeedOneCharMatch = {
+                            fg = theme.syn.statement,
+                            bold = true,
+                            underline = true,
+                            bg = theme.ui.bg_search
+                        },
+                        LightspeedUniqueChar = {},
+                        LightspeedPendingOpArea = {},
+                        LightspeedGreyWash = {},
+                        LightspeedCursor = {},
+
                     }
                 end
             })
 
-            vim.cmd([[colorscheme kanagawa]])
+            vim.cmd([[colorscheme kanagawa-lotus]])
         end
     },
     {

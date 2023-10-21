@@ -123,7 +123,7 @@ local visual_mappings = {
 
 -- TODO: delete
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
-    pattern = "*.ts,*.json",
+    pattern = "*.ts,*.json,*.md",
     callback = function()
         vim.api.nvim_command("CocCommand prettier.forceFormatDocument")
     end
