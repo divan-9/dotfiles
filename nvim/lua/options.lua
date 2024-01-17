@@ -39,4 +39,23 @@ vim.cmd [[
 vim.cmd [[
     autocmd FileType html setlocal shiftwidth=2 tabstop=2
     autocmd FileType vue setlocal shiftwidth=2 tabstop=2
+    autocmd FileType vue setlocal shiftwidth=2 tabstop=2
 ]]
+
+vim.api.nvim_create_autocmd({ "BufRead" }, {
+    pattern = "*.md",
+    callback = function()
+        vim.cmd [[
+            setlocal wrap linebreak nolist
+        ]]
+    end
+})
+
+vim.api.nvim_create_autocmd({ "BufRead" }, {
+    pattern = { "*.props", "*.csproj", "*.targets" },
+    callback = function()
+        vim.cmd [[
+            setfiletype xml
+        ]]
+    end
+})

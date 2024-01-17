@@ -4,19 +4,26 @@
 # Disable standard app switcher
 # cmd - tab: false
 
+# Disable dock hide/show
+cmd + alt - d: false
+
 # Disable escape key for Safari
-#escape [
-#    "safari": false
-#]
+ # escape [
+     # "safari": true
+     # "emacs" : true
+ # ]
 
 rcmd - c: open /Applications/Cron.app
+rcmd - z: open /Applications/Zed.app
+rcmd + alt - c: open "/Applications/Visual Studio Code.app"
 rcmd - m: open /System/Applications/Mail.app
 # rcmd - t: open /Applications/iTerm.app
 rcmd - t: open /Applications/Alacritty.app
 rcmd - a: open /Applications/Anki.app
 # rcmd - t: open /Applications/Kitty.app
+# rcmd - s: open /Applications/Safari.app
 rcmd - s: open /Applications/Firefox.app
-rcmd - l: open /Applications/Slack.app
+# rcmd - l: open /Applications/Slack.app
 rcmd - d: open /Applications/Discord.app
 rcmd - b: open /Applications/Brave\ Browser.app
 # rcmd - e: open /Applications/Lens.app
@@ -24,7 +31,11 @@ rcmd - b: open /Applications/Brave\ Browser.app
 rcmd - e: open /opt/homebrew/Cellar/emacs-plus@29/29.1/Emacs.app
 # rcmd - o: open /Applications/Opera.app
 rcmd - o: open /Applications/Obsidian.app
-
+rcmd - g: open /users/dmitryivanov/applications/ChatGPT.app
+rcmd + alt - t: open /Applications/Telegram.app
+rcmd + alt - m: open /System/Applications/Music.app
+rcmd + alt - v: scutil --nc start d.ivanov && osascript -e 'display notification "Connection started" with title "VPN: d.ivanov"'
+rcmd + alt + shift - v: scutil --nc stop d.ivanov && osascript -e 'display notification "Connection stopped" with title "VPN: d.ivanov"'
 
 
 # https://github.com/julian-heng/yabai-config
@@ -50,7 +61,24 @@ shift + alt - 2 : yabai -m window --space 2; yabai -m space --focus 2
 shift + alt - 3 : yabai -m window --space 3; yabai -m space --focus 3
 shift + alt - 4 : yabai -m window --space 4; yabai -m space --focus 4
 
+
 # Float / Unfloat window
-shift + alt - space : \
+# shift + alt - space : \
+#     yabai -m window --toggle float; \
+#     yabai -m window --toggle border
+
+shift + alt - space: yabai -m window --toggle topmost 
+shift + alt - f: \
     yabai -m window --toggle float; \
-    yabai -m window --toggle border
+    yabai -m window --resize abs:900:500
+
+rcmd - 1: yabai -m space --focus 1
+rcmd - 2: yabai -m space --focus 2
+rcmd - 3: yabai -m space --focus 3
+rcmd - 4: yabai -m space --focus 4
+rcmd - 5: yabai -m space --focus 5
+rcmd - 6: yabai -m space --focus 6
+rcmd - 7: yabai -m space --focus 7
+rcmd - 8: yabai -m space --focus 8
+rcmd - 9: yabai -m space --focus 9
+

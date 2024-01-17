@@ -1,0 +1,5 @@
+(message "Hello from early init")
+(message default-frame-alist)
+(push '(fullscreen . maximized) default-frame-alist)
+(message default-frame-alist)
+(set-frame-parameter nil 'fullscreen 'fullboth)

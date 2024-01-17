@@ -5,15 +5,24 @@ window:
 draw_bold_text_with_bright_colors: true
 debug.render_timer: false
 
+cursor:
+  style:
+    blinking: Always
+  blink_interval: 500
+
+startup_mode: Maximized
+
+
 import:
   - ~/.alacritty-colorscheme/themes/ayu_dark.yaml
 
 font:
   normal:
-    family: FiraCode Nerd Font
+    # family: FiraCode Nerd Font
     # family: Fisa Code
     # family: MonoLisa
-    style: Retina
+    family: Macon
+    # style: Retina
   bold:
     family: FiraCode Nerd Font
     # family: MonoLisa

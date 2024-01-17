@@ -1,5 +1,5 @@
 local M = { "hoob3rt/lualine.nvim" }
-
+M.enabled = false
 M.dependencies = {
 }
 

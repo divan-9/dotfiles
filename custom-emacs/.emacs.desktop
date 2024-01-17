@@ -1,0 +1,631 @@
+;; -*- mode: emacs-lisp; lexical-binding:t; coding: utf-8-emacs; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Thu Jan  4 09:45:42 2024
+;; Desktop file format version 208
+;; Emacs version 29.1
+
+;; Global section:
+(setq desktop-saved-frameset [frameset 1 (26006 25126 981585 0) (desktop . "208") "dmitryivanov@Dmitrys-MacBook-Pro.local" nil nil ((((minibuffer . t) (fontsize . 0) (font . "-*-Menlo-regular-normal-normal-*-14-*-*-*-m-0-iso10646-1") (border-width . 0) (internal-border-width . 2) (child-frame-border-width) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars) (horizontal-scroll-bars) (foreground-color . "Black") (background-color . "White") (line-spacing) (left-fringe . 10) (right-fringe . 10) (no-special-glyphs) (undecorated) (undecorated-round) (ns-appearance) (ns-transparent-titlebar) (z-group) (no-focus-on-map) (no-accept-focus) (menu-bar-lines . 0) (tab-bar-lines . 0) (tool-bar-lines . 0) (title) (icon-type) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 15) (scroll-bar-height . 15) (alpha) (alpha-background) (fullscreen) (scroll-bar-foreground) (scroll-bar-background) (display-type . color) (background-mode . light) (cursor-color . "black") (font-parameter) (frameset--id . "98ED-BD15-87EA-93A3") (frameset--mini t) (height . 36) (width . 80) (modeline . t) (unsplittable) (left . 29) (top . 68) (icon-name) (visibility . t) (display . "Dmitrys-MacBook-Pro.local") (explicit-name) (tool-bar-position . top)) ((min-height . 4) (min-width . 10) (min-height-ignore . 2) (min-width-ignore . 5) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 64) (min-pixel-width . 80) (min-pixel-height-ignore . 32) (min-pixel-width-ignore . 40) (min-pixel-height-safe . 16) (min-pixel-width-safe . 16)) leaf (pixel-width . 660) (pixel-height . 560) (total-width . 82) (total-height . 35) (normal-height . 1.0) (normal-width . 1.0) (buffer "treesitter.lua" (selected) (hscroll . 0) (fringes 10 10 nil nil) (margins nil) (scroll-bars nil 0 t nil 0 t nil) (vscroll . 0) (dedicated) (point . 1) (start . 1))) (((minibuffer . t) (fontsize . 0) (font . "-*-Menlo-regular-normal-normal-*-14-*-*-*-m-0-iso10646-1") (border-width . 0) (internal-border-width . 2) (child-frame-border-width) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars) (horizontal-scroll-bars) (foreground-color . "Black") (background-color . "White") (line-spacing) (left-fringe . 10) (right-fringe . 10) (no-special-glyphs) (undecorated) (undecorated-round) (ns-appearance) (ns-transparent-titlebar) (z-group) (no-focus-on-map) (no-accept-focus) (menu-bar-lines . 0) (tab-bar-lines . 0) (tool-bar-lines . 0) (title) (icon-type) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 15) (scroll-bar-height . 15) (alpha) (alpha-background) (fullscreen . fullboth) (display . "Dmitrys-MacBook-Pro.local") (scroll-bar-foreground) (scroll-bar-background) (display-type . color) (background-mode . light) (cursor-color . "black") (font-parameter) (visibility . t) (last-focus-update . t) (frameset--id . "6DF9-0AED-4079-F20F") (frameset--mini t) (modeline . t) (unsplittable) (icon-name) (explicit-name) (tool-bar-position . top) (height . 36) (width . 80) (left . 432) (top . 38)) ((min-height . 4) (min-width . 20) (min-height-ignore . 3) (min-width-ignore . 10) (min-height-safe . 1) (min-width-safe . 4) (min-pixel-height . 64) (min-pixel-width . 160) (min-pixel-height-ignore . 48) (min-pixel-width-ignore . 80) (min-pixel-height-safe . 16) (min-pixel-width-safe . 32)) hc (pixel-width . 660) (pixel-height . 560) (total-width . 82) (total-height . 35) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 328) (pixel-height . 560) (total-width . 41) (total-height . 35) (normal-height . 1.0) (normal-width . 0.5011600928074246) (buffer "ProductImpressionRuleMapper.cs" (selected) (hscroll . 0) (fringes 10 10 nil nil) (margins nil) (scroll-bars nil 0 t nil 0 t nil) (vscroll . 0) (dedicated) (point . 2341) (start . 1903)) (prev-buffers ("ProductImpressionRuleMapper.cs" 1229 2341) ("ProductImpressionRuleMapperCache.cs" 700 1732) ("StopProductImpressionRulesCommandHandler.cs" 1 641) ("StopProductImpressionRulesCommand.cs" 1 262) ("MessageHandler.cs<RetailRocket.SponsoredProducts.SmartPlacements.Advertisers.EventEnvelopeConsumer>" 1 2266) ("CompositionRoot.cs" 1 643) ("2583_rev2.json" 5104 6330))) (leaf (last . t) (pixel-width . 332) (pixel-height . 560) (total-width . 41) (total-height . 35) (normal-height . 1.0) (normal-width . 0.4988399071925754) (buffer "omnisharp<dmitryivanov>" (selected) (hscroll . 0) (fringes 10 10 nil nil) (margins nil) (scroll-bars nil 0 t nil 0 t nil) (vscroll . 0) (dedicated) (point . 348) (start . 1)))) (((minibuffer . t) (fontsize . 0) (font . "-*-Menlo-regular-normal-normal-*-14-*-*-*-m-0-iso10646-1") (border-width . 0) (internal-border-width . 2) (child-frame-border-width) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars) (horizontal-scroll-bars) (foreground-color . "#000000") (background-color . "#ffffff") (line-spacing) (left-fringe . 10) (right-fringe . 10) (no-special-glyphs) (undecorated) (undecorated-round) (ns-appearance) (ns-transparent-titlebar) (z-group) (no-focus-on-map) (no-accept-focus) (menu-bar-lines . 0) (tab-bar-lines . 0) (tool-bar-lines . 0) (title) (icon-type) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 15) (scroll-bar-height . 15) (alpha) (alpha-background) (fullscreen . fullboth) (scroll-bar-foreground) (scroll-bar-background) (display-type . color) (background-mode . light) (cursor-color . "#000000") (font-parameter) (environment) (last-focus-update . t) (tabs (current-tab (name . "ProductImpressionRuleMapper.cs") (explicit-name))) (frameset--id . "F52C-BC6A-A0D6-26ED") (frameset--mini t . t) (modeline . t) (unsplittable) (icon-name) (display . "Dmitrys-MacBook-Pro.local") (explicit-name) (tool-bar-position . top) (lsp-ui-doc-buffer . "Unprintable entity") (visibility . t) (height . 67) (width . 213) (left . 566) (top . 168)) ((min-height . 4) (min-width . 10) (min-height-ignore . 3) (min-width-ignore . 5) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 64) (min-pixel-width . 80) (min-pixel-height-ignore . 48) (min-pixel-width-ignore . 40) (min-pixel-height-safe . 16) (min-pixel-width-safe . 16)) leaf (pixel-width . 1724) (pixel-height . 1056) (total-width . 216) (total-height . 66) (normal-height . 1.0) (normal-width . 1.0) (buffer "ProductImpressionRuleMapper.cs" (selected . t) (hscroll . 0) (fringes 10 10 nil nil) (margins nil) (scroll-bars nil 0 t nil 0 t nil) (vscroll . 0) (dedicated) (point . 1449) (start . 898)) (prev-buffers ("ProductImpressionRuleMapper.cs" 1298 2412) ("*ts-ls::stderr*" 1 1))))])
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring nil)
+(setq regexp-search-ring '(#("\\_<Combine\\_>" 0 13 (isearch-case-fold-search nil)) #("mongos" 0 6 (isearch-case-fold-search nil)) #("shar" 0 4 (isearch-case-fold-search t)) #("corfu" 0 5 (isearch-case-fold-search t)) #("auto" 0 4 (isearch-case-fold-search t)) #("shift_rig" 0 9 (isearch-case-fold-search t)) "prev" "ivy-mode" #("evil" 0 4 (isearch-case-fold-search t)) #("        " 0 8 (isearch-case-fold-search t)) #("indent-relative" 0 15 (isearch-case-fold-search t)) #("tab-always-indent" 0 17 (isearch-case-fold-search t)) #("\\_<IGetAdvertFiles\\_>" 0 21 (isearch-case-fold-search t)) #(".net" 0 4 (isearch-case-fold-search t)) #("dotnet" 0 6 (isearch-case-fold-search t)) #("\\_<IGetCampaigns\\_>" 0 19 (isearch-case-fold-search nil))))
+(setq register-alist '((107 . "kjk") (117) (113) (48 . #("  (define-key evil-insert-state-map (kbd \"TAB\") 'tab-to-tab-stop)\n" 0 2 (yank-handler (evil-yank-line-handler nil t) fontified t) 2 3 (yank-handler (evil-yank-line-handler nil t) face (rainbow-delimiters-depth-2-face) fontified t) 3 14 (yank-handler (evil-yank-line-handler nil t) fontified t) 14 36 (yank-handler (evil-yank-line-handler nil t) fontified t) 36 37 (yank-handler (evil-yank-line-handler nil t) face (rainbow-delimiters-depth-3-face) fontified t) 37 41 (yank-handler (evil-yank-line-handler nil t) fontified t) 41 46 (yank-handler (evil-yank-line-handler nil t) face font-lock-string-face fontified t) 46 47 (yank-handler (evil-yank-line-handler nil t) face (rainbow-delimiters-depth-3-face) fontified t) 47 64 (yank-handler (evil-yank-line-handler nil t) fontified t) 64 65 (yank-handler (evil-yank-line-handler nil t) face (rainbow-delimiters-depth-2-face) fontified t) 65 66 (yank-handler (evil-yank-line-handler nil t) fontified t)))))
+(setq file-name-history '(#("/Users/dmitryivanov/omnisharp/" 0 30 (ivy-index 1)) "~/dev/SponsoredProducts/ACL/RetailRocket.SponsoredProducts.SmartPlacements.Advertisers.EventEnvelopeConsumer/CompositionRoot.cs" #("/Users/dmitryivanov/dev/SponsoredProducts/" 0 42 (ivy-index 0)) "~/dev/SmartPlacements/advertisers/backend/Apps/SmartPlacements.Advertisers.PrivateApi/UseCases/TryStartAdvert.cs" "~/dev/SmartPlacements/advertisers/backend/Private/SmartPlacements.Advertisers.UseCases/OrdAdverts/RegisterOrdAdvert.cs" "~/dev/SmartPlacements/advertisers/backend/.editorconfig" "~/dev/SmartPlacements/advertisers/backend/Private/SmartPlacements.Advertisers.UseCases/OrdAdverts/RegisterOrdAdvert.cs" "~/dev/SmartPlacements/advertisers/backend/Private/SmartPlacements.Advertisers/UseCases/Adverts/IGetAdvertFiles.cs" #("/Users/dmitryivanov/dev/SmartPlacements/advertisers/backend/Apps/SmartPlacements.Advertisers.PrivateApi/UseCases/TryStartAdvert.cs" 0 130 (ivy-index 2)) "~/dev/SmartPlacements/advertisers/backend/Apps/SmartPlacements.Advertisers.PrivateApi/UseCases/#TryStartAdvert.cs#" #("/Users/dmitryivanov/dev/SmartPlacements/advertisers/frontend/" 0 61 (ivy-index 0)) #("/Users/dmitryivanov/dev/SmartPlacements/advertisers/backend/" 0 60 (ivy-index 0)) "~/dev/SmartPlacements/advertisers/backend/ACL/SmartPlacements.Advertisers.AdvertiserBalanceEventEnvelopeConsumer/MessageHandler.cs" #("/Users/dmitryivanov/" 0 20 (ivy-index 0)) #("/Users/dmitryivanov/dev/SmartPlacements/advertisers/backend/Private/SmartPlacements.Advertisers.UseCases/" 0 105 (ivy-index 1)) "~/dev/SmartPlacements/advertisers/backend/Private/SmartPlacements.Advertisers.UseCases/OrdAdverts/#RegisterOrdAdvert.cs#" "~/dev/SmartPlacements/advertisers/backend/Apps/SmartPlacements.Advertisers.PrivateApi/UseCases/TryStartAdvert.cs" "~/dev/devops/deployments/env/ah-prod/values/sp/all.yaml" "~/dev/devops/deployments/env/ah-staging/values/sp/all.yaml" "~/dev/SmartPlacements/advertisers/frontend/src/core/advertPage/index.ts" #("/Users/dmitryivanov/dev/courses-local/algorithms/" 0 49 (ivy-index 1)) "~/dev/courses-local/algorithms/code/README.md" #("/Users/dmitryivanov/dev/devops/deployments/env/ah-prod/values/" 0 62 (ivy-index 1)) "~/dev/devops/deployments/env/ah-prod/values/sp/all.yaml" #("/Users/dmitryivanov/dev/devops/deployments/" 0 43 (ivy-index 2)) #("/Users/dmitryivanov/dev/courses-local/algorithms/code/" 0 54 (ivy-index 0)) "~/dev/courses-local/algorithms/code/inversions.test.ts" "~/.emacs.d/init.el" "~/dev/SmartPlacements/advertisers/backend/Private/SmartPlacements.Advertisers.UseCases/OrdAdverts/RegisterOrdAdvert.cs" "~/dev/courses-local/algorithms/code/sort.test.ts" "~/dev/courses-local/algorithms/code/inversions.ts" "~/.emacs.d/early-init.el" "/opt/homebrew/Cellar/emacs-plus@29/29.1/share/emacs/29.1/etc/COPYING"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 208
+  "/Users/dmitryivanov/dev/SponsoredProducts/Private/RetailRocket.SponsoredProducts.Visitors.Infrastructure/ProductImpressionRuleMapper.cs"
+  "ProductImpressionRuleMapper.cs"
+  'csharp-ts-mode
+  '(font-lock-mode display-line-numbers-mode evil-local-mode evil-collection-unimpaired-mode lsp-mode eldoc-mode rainbow-delimiters-mode flymake-mode lsp-diagnostics-mode lsp-headerline-breadcrumb-mode lsp-modeline-code-actions-mode lsp-modeline-diagnostics-mode lsp-modeline-workspace-status-mode lsp-ui-doc-mode lsp-ui-sideline-mode lsp-ui-mode lsp-managed-mode lsp-lens-mode company-mode lsp-completion-mode)
+  1449
+  '(1449 nil)
+  nil
+  nil
+  '((buffer-display-time 26006 25126 765727 0) (buffer-file-coding-system . undecided-unix) (overwrite-mode))
+  '((mark-ring (2412 2412 2412 2412 2412 2412 2412 2412 2412 2412 2412 2341 2163))))
+
+(desktop-create-buffer 208
+  "/Users/dmitryivanov/dev/dotfiles/nvim/lua/plugins/treesitter.lua"
+  "treesitter.lua"
+  'fundamental-mode
+  '(evil-local-mode font-lock-mode display-line-numbers-mode evil-collection-unimpaired-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 26006 25126 969552 0) (buffer-file-coding-system . undecided-unix) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  nil
+  "omnisharp"
+  'dired-mode
+  '(company-box-mode company-mode corfu-mode evil-collection-unimpaired-mode evil-local-mode display-line-numbers-mode font-lock-mode)
+  348
+  '(348 nil)
+  t
+  '("/Users/dmitryivanov/omnisharp/")
+  '((buffer-display-time 26006 25126 765072 0) (overwrite-mode))
+  '((mark-ring (348 277 277 32 375 291 277))))
+
+(desktop-create-buffer 208
+  "/Users/dmitryivanov/dev/SponsoredProducts/Private/RetailRocket.SponsoredProducts.Visitors.Infrastructure/ProductImpressionRuleMapperCache.cs"
+  "ProductImpressionRuleMapperCache.cs"
+  'csharp-ts-mode
+  '(font-lock-mode display-line-numbers-mode evil-local-mode evil-collection-unimpaired-mode lsp-mode eldoc-mode rainbow-delimiters-mode flymake-mode lsp-diagnostics-mode lsp-headerline-breadcrumb-mode lsp-modeline-code-actions-mode lsp-modeline-diagnostics-mode lsp-modeline-workspace-status-mode lsp-ui-doc-mode lsp-ui-sideline-mode lsp-ui-mode lsp-managed-mode lsp-lens-mode company-mode lsp-completion-mode)
+  1732
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 26006 24844 357107 974000) (buffer-file-coding-system . utf-8-with-signature-unix) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/Users/dmitryivanov/dev/SponsoredProducts/Private/RetailRocket.SponsoredProducts.Visitors.UseCases/StopProductImpressionRulesCommandHandler.cs"
+  "StopProductImpressionRulesCommandHandler.cs"
+  'csharp-ts-mode
+  '(font-lock-mode display-line-numbers-mode evil-local-mode evil-collection-unimpaired-mode lsp-mode eldoc-mode rainbow-delimiters-mode flymake-mode lsp-diagnostics-mode lsp-headerline-breadcrumb-mode lsp-modeline-code-actions-mode lsp-modeline-diagnostics-mode lsp-modeline-workspace-status-mode lsp-ui-doc-mode lsp-ui-sideline-mode lsp-ui-mode lsp-managed-mode lsp-lens-mode company-mode lsp-completion-mode)
+  641
+  '(641 nil)
+  nil
+  nil
+  '((buffer-display-time 26006 24837 231549 974000) (buffer-file-coding-system . undecided-unix) (overwrite-mode))
+  '((mark-ring (641 120))))
+
+(desktop-create-buffer 208
+  "/Users/dmitryivanov/dev/SponsoredProducts/Private/RetailRocket.SponsoredProducts.Visitors/UseCases/StopProductImpressionRulesCommand.cs"
+  "StopProductImpressionRulesCommand.cs"
+  'csharp-ts-mode
+  '(font-lock-mode display-line-numbers-mode evil-local-mode evil-collection-unimpaired-mode lsp-mode eldoc-mode rainbow-delimiters-mode flymake-mode lsp-diagnostics-mode lsp-headerline-breadcrumb-mode lsp-modeline-code-actions-mode lsp-modeline-diagnostics-mode lsp-modeline-workspace-status-mode lsp-ui-doc-mode lsp-ui-sideline-mode lsp-ui-mode lsp-managed-mode lsp-lens-mode company-mode lsp-completion-mode)
+  262
+  '(262 nil)
+  nil
+  nil
+  '((buffer-display-time 26006 24824 744051 974000) (buffer-file-coding-system . utf-8-with-signature-dos) (overwrite-mode))
+  '((mark-ring (262))))
+
+(desktop-create-buffer 208
+  "/Users/dmitryivanov/dev/SponsoredProducts/ACL/RetailRocket.SponsoredProducts.SmartPlacements.Advertisers.EventEnvelopeConsumer/MessageHandler.cs"
+  "MessageHandler.cs"
+  'csharp-ts-mode
+  '(lsp-mode font-lock-mode display-line-numbers-mode evil-local-mode evil-collection-unimpaired-mode eldoc-mode rainbow-delimiters-mode flymake-mode lsp-diagnostics-mode lsp-headerline-breadcrumb-mode lsp-modeline-code-actions-mode lsp-modeline-diagnostics-mode lsp-modeline-workspace-status-mode lsp-ui-doc-mode lsp-ui-sideline-mode lsp-ui-mode lsp-managed-mode lsp-lens-mode company-mode lsp-completion-mode)
+  2266
+  '(2266 nil)
+  nil
+  nil
+  '((buffer-display-time 26006 24811 869852 974000) (buffer-file-coding-system . undecided-unix) (overwrite-mode))
+  '((mark-ring (2266))))
+
+(desktop-create-buffer 208
+  "/Users/dmitryivanov/dev/SponsoredProducts/ACL/RetailRocket.SponsoredProducts.SmartPlacements.Advertisers.EventEnvelopeConsumer/CompositionRoot.cs"
+  "CompositionRoot.cs"
+  'csharp-ts-mode
+  '(lsp-mode font-lock-mode display-line-numbers-mode evil-local-mode evil-collection-unimpaired-mode rainbow-delimiters-mode flymake-mode lsp-diagnostics-mode lsp-headerline-breadcrumb-mode lsp-modeline-code-actions-mode lsp-modeline-diagnostics-mode lsp-modeline-workspace-status-mode lsp-ui-doc-mode lsp-ui-sideline-mode lsp-ui-mode lsp-managed-mode lsp-lens-mode company-mode lsp-completion-mode)
+  643
+  '(643 nil)
+  nil
+  nil
+  '((buffer-display-time 26006 24739 58171 974000) (buffer-file-coding-system . undecided-unix) (overwrite-mode))
+  '((mark-ring (643))))
+
+(desktop-create-buffer 208
+  "/Users/dmitryivanov/Downloads/2583_rev2.json"
+  "2583_rev2.json"
+  'js-json-mode
+  '(rainbow-delimiters-mode evil-collection-unimpaired-mode evil-local-mode display-line-numbers-mode font-lock-mode)
+  6330
+  '(5964 nil)
+  nil
+  nil
+  '((buffer-display-time 26006 24736 263012 974000) (buffer-file-coding-system . utf-8-unix) (overwrite-mode))
+  '((mark-ring (4376 4376 2236 38436 36412 34148 30709 26997 24866 22712 13673 11588 9392 6796 4376 2236))))
+
+(desktop-create-buffer 208
+  "/Users/dmitryivanov/dev/SmartPlacements/advertisers/backend/Apps/SmartPlacements.Advertisers.PrivateApi/FacadeFactory.cs"
+  "FacadeFactory.cs"
+  'csharp-ts-mode
+  '(lsp-mode company-box-mode corfu-mode font-lock-mode display-line-numbers-mode evil-local-mode evil-collection-unimpaired-mode rainbow-delimiters-mode eldoc-mode flymake-mode lsp-diagnostics-mode lsp-headerline-breadcrumb-mode lsp-modeline-code-actions-mode lsp-modeline-diagnostics-mode lsp-modeline-workspace-status-mode lsp-ui-doc-mode lsp-ui-sideline-mode lsp-ui-mode lsp-managed-mode lsp-lens-mode company-mode lsp-completion-mode)
+  10442
+  '(8809 nil)
+  nil
+  nil
+  '((buffer-display-time 26006 21576 234798 401000) (buffer-file-coding-system . undecided-unix) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/Users/dmitryivanov/dev/SmartPlacements/advertisers/backend/Private/SmartPlacements.Advertisers/IContentTemplate.cs"
+  "IContentTemplate.cs"
+  'csharp-ts-mode
+  '(lsp-mode company-box-mode corfu-mode rainbow-delimiters-mode evil-collection-unimpaired-mode evil-local-mode display-line-numbers-mode font-lock-mode eldoc-mode flymake-mode lsp-diagnostics-mode lsp-headerline-breadcrumb-mode lsp-modeline-code-actions-mode lsp-modeline-diagnostics-mode lsp-modeline-workspace-status-mode lsp-ui-doc-mode lsp-ui-sideline-mode lsp-ui-mode lsp-managed-mode lsp-lens-mode company-mode lsp-completion-mode)
+  197
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 26006 20560 828467 932000) (buffer-file-coding-system . undecided-unix) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/Users/dmitryivanov/dev/SmartPlacements/advertisers/backend/Private/SmartPlacements.Advertisers.UseCases/OrdAdverts/IOrdAdvertMapper.cs"
+  "IOrdAdvertMapper.cs"
+  'csharp-ts-mode
+  '(lsp-mode company-box-mode corfu-mode font-lock-mode display-line-numbers-mode evil-local-mode evil-collection-unimpaired-mode rainbow-delimiters-mode eldoc-mode flymake-mode lsp-diagnostics-mode lsp-headerline-breadcrumb-mode lsp-modeline-code-actions-mode lsp-modeline-diagnostics-mode lsp-modeline-workspace-status-mode lsp-ui-doc-mode lsp-ui-sideline-mode lsp-ui-mode lsp-managed-mode lsp-lens-mode company-mode lsp-completion-mode)
+  252
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 26006 18401 960417 549000) (buffer-file-coding-system . undecided-unix) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/Users/dmitryivanov/dev/SmartPlacements/advertisers/backend/Private/SmartPlacements.Advertisers/OrdAdvert.cs"
+  "OrdAdvert.cs"
+  'csharp-ts-mode
+  '(lsp-mode company-box-mode corfu-mode font-lock-mode display-line-numbers-mode evil-local-mode evil-collection-unimpaired-mode rainbow-delimiters-mode eldoc-mode flymake-mode lsp-diagnostics-mode lsp-headerline-breadcrumb-mode lsp-modeline-code-actions-mode lsp-modeline-diagnostics-mode lsp-modeline-workspace-status-mode lsp-ui-doc-mode lsp-ui-sideline-mode lsp-ui-mode lsp-managed-mode lsp-lens-mode company-mode lsp-completion-mode)
+  77
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 26006 18398 830994 549000) (buffer-file-coding-system . undecided-unix) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/Users/dmitryivanov/dev/SmartPlacements/advertisers/backend/.editorconfig"
+  ".editorconfig"
+  'fundamental-mode
+  '(company-box-mode company-mode corfu-mode evil-collection-unimpaired-mode evil-local-mode display-line-numbers-mode font-lock-mode)
+  1
+  '(1 nil)
+  nil
+  nil
+  '((buffer-display-time 26006 14305 710188 660000) (buffer-file-coding-system . undecided-unix) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/Users/dmitryivanov/dev/SmartPlacements/advertisers/backend/Private/SmartPlacements.Advertisers/UseCases/Adverts/IGetAdvertFiles.cs"
+  "IGetAdvertFiles.cs"
+  'csharp-ts-mode
+  '(lsp-mode company-box-mode corfu-mode evil-collection-unimpaired-mode evil-local-mode display-line-numbers-mode font-lock-mode rainbow-delimiters-mode eldoc-mode flymake-mode lsp-diagnostics-mode lsp-headerline-breadcrumb-mode lsp-modeline-code-actions-mode lsp-modeline-diagnostics-mode lsp-modeline-workspace-status-mode lsp-ui-doc-mode lsp-ui-sideline-mode lsp-ui-mode lsp-managed-mode lsp-lens-mode company-mode lsp-completion-mode)
+  122
+  '(122 nil)
+  nil
+  nil
+  '((buffer-display-time 26006 14160 652225 660000) (buffer-file-coding-system . undecided-unix) (overwrite-mode))
+  '((mark-ring (122 122 122 122))))
+
+(desktop-create-buffer 208
+  "/Users/dmitryivanov/dev/SmartPlacements/advertisers/backend/Private/SmartPlacements.Advertisers/UseCases/Advertisers/IGetAdvertiser.cs"
+  "IGetAdvertiser.cs"
+  'csharp-ts-mode
+  '(lsp-mode company-box-mode corfu-mode evil-collection-unimpaired-mode evil-local-mode display-line-numbers-mode font-lock-mode rainbow-delimiters-mode eldoc-mode flymake-mode lsp-diagnostics-mode lsp-headerline-breadcrumb-mode lsp-modeline-code-actions-mode lsp-modeline-diagnostics-mode lsp-modeline-workspace-status-mode lsp-ui-doc-mode lsp-ui-sideline-mode lsp-ui-mode lsp-managed-mode lsp-lens-mode company-mode lsp-completion-mode)
+  161
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 26006 14132 44276 660000) (buffer-file-coding-system . undecided-unix) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/opt/homebrew/Cellar/emacs-plus@29/29.1/share/emacs/29.1/lisp/progmodes/compile.el"
+  "compile.el"
+  'emacs-lisp-mode
+  '(company-box-mode company-mode corfu-mode evil-collection-unimpaired-mode evil-local-mode display-line-numbers-mode font-lock-mode eldoc-mode rainbow-delimiters-mode)
+  28134
+  '(28134 nil)
+  nil
+  nil
+  '((buffer-display-time 26006 14025 302611 660000) (buffer-file-coding-system . utf-8-unix) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/Users/dmitryivanov/dev/courses-local/algorithms/code/node_modules/bun-types/types.d.ts"
+  "types.d.ts"
+  'typescript-ts-mode
+  '(company-box-mode corfu-mode evil-collection-unimpaired-mode evil-local-mode display-line-numbers-mode font-lock-mode lsp-mode rainbow-delimiters-mode flymake-mode lsp-diagnostics-mode lsp-headerline-breadcrumb-mode lsp-modeline-code-actions-mode lsp-modeline-diagnostics-mode lsp-modeline-workspace-status-mode lsp-ui-doc-mode lsp-ui-sideline-mode lsp-ui-mode lsp-managed-mode eldoc-mode company-mode lsp-completion-mode)
+  306992
+  '(306992 nil)
+  nil
+  nil
+  '((buffer-display-time 26006 11965 193068 767000) (buffer-file-coding-system . utf-8-unix) (overwrite-mode))
+  '((mark-ring (306992 306992 306992))))
+
+(desktop-create-buffer 208
+  "/Users/dmitryivanov/omnisharp/omnisharp-osx-arm64-net6.0/run"
+  "run"
+  'sh-mode
+  '(company-box-mode company-mode corfu-mode evil-collection-unimpaired-mode evil-local-mode display-line-numbers-mode rainbow-delimiters-mode sh-electric-here-document-mode font-lock-mode)
+  109
+  '(109 nil)
+  nil
+  nil
+  '((buffer-display-time 26006 13393 97744 660000) (buffer-file-coding-system . undecided-unix) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  nil
+  "omnisharp-osx-arm64-net6.0"
+  'dired-mode
+  '(company-box-mode company-mode corfu-mode evil-collection-unimpaired-mode evil-local-mode display-line-numbers-mode font-lock-mode)
+  11261
+  '(11261 nil)
+  t
+  '("/Users/dmitryivanov/omnisharp/omnisharp-osx-arm64-net6.0/")
+  '((buffer-display-time 26006 13394 966840 660000) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  nil
+  "omnisharp-osx"
+  'dired-mode
+  '(company-box-mode company-mode corfu-mode evil-collection-unimpaired-mode evil-local-mode display-line-numbers-mode font-lock-mode)
+  164
+  '(164 nil)
+  t
+  '("/Users/dmitryivanov/omnisharp/omnisharp-osx/")
+  '((buffer-display-time 26006 13396 474290 660000) (overwrite-mode))
+  '((mark-ring (164 292 164 164))))
+
+(desktop-create-buffer 208
+  nil
+  "omnisharp"
+  'dired-mode
+  '(company-box-mode company-mode corfu-mode evil-collection-unimpaired-mode evil-local-mode display-line-numbers-mode font-lock-mode)
+  180
+  '(180 nil)
+  t
+  '("/Users/dmitryivanov/omnisharp/omnisharp-osx/omnisharp/")
+  '((buffer-display-time 26006 13397 360020 660000) (overwrite-mode))
+  '((mark-ring (180))))
+
+(desktop-create-buffer 208
+  "/Users/dmitryivanov/dev/SmartPlacements/advertisers/backend/ACL/SmartPlacements.Advertisers.AdvertiserBalanceEventEnvelopeConsumer/MessageHandler.cs"
+  "MessageHandler.cs"
+  'csharp-ts-mode
+  '(lsp-mode company-box-mode corfu-mode evil-collection-unimpaired-mode evil-local-mode display-line-numbers-mode font-lock-mode rainbow-delimiters-mode eldoc-mode flymake-mode lsp-diagnostics-mode lsp-headerline-breadcrumb-mode lsp-modeline-code-actions-mode lsp-modeline-diagnostics-mode lsp-modeline-workspace-status-mode lsp-ui-doc-mode lsp-ui-sideline-mode lsp-ui-mode lsp-managed-mode lsp-lens-mode company-mode lsp-completion-mode)
+  1421
+  '(1421 nil)
+  nil
+  nil
+  '((buffer-display-time 26006 13207 386922 4000) (buffer-file-coding-system . undecided-unix) (overwrite-mode))
+  '((mark-ring (1496 1496 1496 1496 1726 864 864 514 514 514 514 525 525))))
+
+(desktop-create-buffer 208
+  nil
+  "dmitryivanov"
+  'dired-mode
+  '(company-box-mode company-mode corfu-mode evil-collection-unimpaired-mode evil-local-mode display-line-numbers-mode font-lock-mode)
+  7780
+  '(7780 nil)
+  t
+  '("/Users/dmitryivanov/")
+  '((buffer-display-time 26006 12130 627545 767000) (overwrite-mode))
+  '((mark-ring (7780 3464 3463 3463 212 212))))
+
+(desktop-create-buffer 208
+  nil
+  ".omnisharp"
+  'dired-mode
+  '(company-box-mode company-mode corfu-mode evil-collection-unimpaired-mode evil-local-mode display-line-numbers-mode font-lock-mode)
+  151
+  '(151 nil)
+  t
+  '("/Users/dmitryivanov/.omnisharp/")
+  '((buffer-display-time 26006 12131 537521 767000) (overwrite-mode))
+  '((mark-ring (151))))
+
+(desktop-create-buffer 208
+  nil
+  "UseCases"
+  'dired-mode
+  '(company-box-mode company-mode corfu-mode evil-collection-unimpaired-mode evil-local-mode display-line-numbers-mode font-lock-mode)
+  293
+  '(293 nil)
+  t
+  '("/Users/dmitryivanov/dev/SmartPlacements/advertisers/backend/Apps/SmartPlacements.Advertisers.PrivateApi/UseCases/")
+  '((buffer-display-time 26006 11495 900864 478000) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  nil
+  "SmartPlacements.Advertisers.PrivateApi"
+  'dired-mode
+  '(company-box-mode company-mode corfu-mode evil-collection-unimpaired-mode evil-local-mode display-line-numbers-mode font-lock-mode)
+  1305
+  '(1305 nil)
+  t
+  '("/Users/dmitryivanov/dev/SmartPlacements/advertisers/backend/Apps/SmartPlacements.Advertisers.PrivateApi/")
+  '((buffer-display-time 26006 11493 377251 478000) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  nil
+  "Apps"
+  'dired-mode
+  '(company-box-mode company-mode corfu-mode evil-collection-unimpaired-mode evil-local-mode display-line-numbers-mode font-lock-mode)
+  522
+  '(522 nil)
+  t
+  '("/Users/dmitryivanov/dev/SmartPlacements/advertisers/backend/Apps/")
+  '((buffer-display-time 26006 11491 289288 478000) (overwrite-mode))
+  '((mark-ring (239))))
+
+(desktop-create-buffer 208
+  nil
+  "SmartPlacements.Advertisers.Auth.PrivateApi"
+  'dired-mode
+  '(company-box-mode company-mode corfu-mode evil-collection-unimpaired-mode evil-local-mode display-line-numbers-mode font-lock-mode)
+  227
+  '(227 nil)
+  t
+  '("/Users/dmitryivanov/dev/SmartPlacements/advertisers/backend/Apps/SmartPlacements.Advertisers.Auth.PrivateApi/")
+  '((buffer-display-time 26006 11485 886662 478000) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  nil
+  "backend"
+  'dired-mode
+  '(company-box-mode company-mode corfu-mode evil-collection-unimpaired-mode evil-local-mode display-line-numbers-mode font-lock-mode)
+  588
+  '(588 nil)
+  t
+  '("/Users/dmitryivanov/dev/SmartPlacements/advertisers/backend/")
+  '((buffer-display-time 26006 11482 358892 478000) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  nil
+  "Private"
+  'dired-mode
+  '(company-box-mode company-mode corfu-mode evil-collection-unimpaired-mode evil-local-mode display-line-numbers-mode font-lock-mode)
+  184
+  '(184 nil)
+  t
+  '("/Users/dmitryivanov/dev/SmartPlacements/advertisers/backend/Private/")
+  '((buffer-display-time 26006 11482 63178 478000) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  nil
+  "SmartPlacements.Advertisers.UseCases"
+  'dired-mode
+  '(company-box-mode company-mode corfu-mode evil-collection-unimpaired-mode evil-local-mode display-line-numbers-mode font-lock-mode)
+  221
+  '(221 nil)
+  t
+  '("/Users/dmitryivanov/dev/SmartPlacements/advertisers/backend/Private/SmartPlacements.Advertisers.UseCases/")
+  '((buffer-display-time 26006 11474 224174 478000) (overwrite-mode))
+  '((mark-ring (769 833 279 357 424 627 703))))
+
+(desktop-create-buffer 208
+  nil
+  "Partners"
+  'dired-mode
+  '(company-box-mode company-mode corfu-mode evil-collection-unimpaired-mode evil-local-mode display-line-numbers-mode font-lock-mode)
+  230
+  '(230 nil)
+  t
+  '("/Users/dmitryivanov/dev/SmartPlacements/advertisers/backend/Private/SmartPlacements.Advertisers.UseCases/Partners/")
+  '((buffer-display-time 26006 11369 892634 478000) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  nil
+  "Portals"
+  'dired-mode
+  '(company-box-mode company-mode corfu-mode evil-collection-unimpaired-mode evil-local-mode display-line-numbers-mode font-lock-mode)
+  229
+  '(229 nil)
+  t
+  '("/Users/dmitryivanov/dev/SmartPlacements/advertisers/backend/Private/SmartPlacements.Advertisers.UseCases/Portals/")
+  '((buffer-display-time 26006 11368 657004 478000) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  nil
+  "AdvertApprovalRequests"
+  'dired-mode
+  '(company-box-mode company-mode corfu-mode evil-collection-unimpaired-mode evil-local-mode display-line-numbers-mode font-lock-mode)
+  246
+  '(246 nil)
+  t
+  '("/Users/dmitryivanov/dev/SmartPlacements/advertisers/backend/Private/SmartPlacements.Advertisers.UseCases/AdvertApprovalRequests/")
+  '((buffer-display-time 26006 11366 130649 478000) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  nil
+  "Advertisers"
+  'dired-mode
+  '(company-box-mode company-mode corfu-mode evil-collection-unimpaired-mode evil-local-mode display-line-numbers-mode font-lock-mode)
+  235
+  '(235 nil)
+  t
+  '("/Users/dmitryivanov/dev/SmartPlacements/advertisers/backend/Private/SmartPlacements.Advertisers.UseCases/Advertisers/")
+  '((buffer-display-time 26006 11365 278390 478000) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  nil
+  "Adverts"
+  'dired-mode
+  '(company-box-mode company-mode corfu-mode evil-collection-unimpaired-mode evil-local-mode display-line-numbers-mode font-lock-mode)
+  231
+  '(231 nil)
+  t
+  '("/Users/dmitryivanov/dev/SmartPlacements/advertisers/backend/Private/SmartPlacements.Advertisers.UseCases/Adverts/")
+  '((buffer-display-time 26006 11363 348089 478000) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  nil
+  "DomainConfigurations"
+  'dired-mode
+  '(company-box-mode company-mode corfu-mode evil-collection-unimpaired-mode evil-local-mode display-line-numbers-mode font-lock-mode)
+  242
+  '(242 nil)
+  t
+  '("/Users/dmitryivanov/dev/SmartPlacements/advertisers/backend/Private/SmartPlacements.Advertisers.UseCases/DomainConfigurations/")
+  '((buffer-display-time 26006 11361 436338 478000) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  nil
+  "OrdAdverts"
+  'dired-mode
+  '(company-box-mode company-mode corfu-mode evil-collection-unimpaired-mode evil-local-mode display-line-numbers-mode font-lock-mode)
+  313
+  '(313 nil)
+  t
+  '("/Users/dmitryivanov/dev/SmartPlacements/advertisers/backend/Private/SmartPlacements.Advertisers.UseCases/OrdAdverts/")
+  '((buffer-display-time 26006 11359 609182 478000) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/Users/dmitryivanov/dev/courses-local/algorithms/code/inversions.ts"
+  "inversions.ts"
+  'typescript-ts-mode
+  '(company-box-mode corfu-mode evil-collection-unimpaired-mode evil-local-mode display-line-numbers-mode rainbow-delimiters-mode lsp-mode font-lock-mode flymake-mode lsp-diagnostics-mode lsp-headerline-breadcrumb-mode lsp-modeline-code-actions-mode lsp-modeline-diagnostics-mode lsp-modeline-workspace-status-mode lsp-ui-doc-mode lsp-ui-sideline-mode lsp-ui-mode lsp-managed-mode eldoc-mode company-mode lsp-completion-mode)
+  629
+  '(629 nil)
+  nil
+  nil
+  '((buffer-display-time 26006 11318 257926 478000) (buffer-file-coding-system . undecided-unix) (overwrite-mode))
+  '((mark-ring (657 605 605))))
+
+(desktop-create-buffer 208
+  "/Users/dmitryivanov/dev/devops/deployments/env/ah-prod/values/sp/all.yaml"
+  "all.yaml"
+  'yaml-ts-mode
+  '(company-box-mode company-mode corfu-mode evil-collection-unimpaired-mode evil-local-mode display-line-numbers-mode font-lock-mode)
+  1529
+  '(1486 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-display-time 26006 4723 853453 349000) (buffer-file-coding-system . undecided-unix) (overwrite-mode))
+  '((mark-ring (1486 1529 1529 1498 1529 4772 1578 914))))
+
+(desktop-create-buffer 208
+  "/Users/dmitryivanov/.emacs.d/elpa/evil-collection-20231225.2045/evil-collection.el"
+  "evil-collection.el"
+  'emacs-lisp-mode
+  '(company-box-mode company-mode corfu-mode evil-collection-unimpaired-mode evil-local-mode display-line-numbers-mode font-lock-mode eldoc-mode rainbow-delimiters-mode)
+  21116
+  '(21116 nil)
+  nil
+  nil
+  '((buffer-display-time 26006 4688 747499 349000) (buffer-file-coding-system . prefer-utf-8-unix) (overwrite-mode))
+  '((mark-ring (21116 21116 21116))))
+
+(desktop-create-buffer 208
+  "/Users/dmitryivanov/dev/courses-local/algorithms/code/inversions.test.ts"
+  "inversions.test.ts"
+  'typescript-ts-mode
+  '(company-box-mode corfu-mode evil-collection-unimpaired-mode evil-local-mode display-line-numbers-mode lsp-mode rainbow-delimiters-mode font-lock-mode flymake-mode lsp-diagnostics-mode lsp-headerline-breadcrumb-mode lsp-modeline-code-actions-mode lsp-modeline-diagnostics-mode lsp-modeline-workspace-status-mode lsp-ui-doc-mode lsp-ui-sideline-mode lsp-ui-mode lsp-managed-mode eldoc-mode company-mode lsp-completion-mode)
+  305
+  '(335 nil)
+  nil
+  nil
+  '((buffer-display-time 26006 4424 334890 709000) (buffer-file-coding-system . undecided-unix) (overwrite-mode))
+  '((mark-ring (305 56 56 349 349 388 388))))
+
+(desktop-create-buffer 208
+  "/Users/dmitryivanov/dev/courses-local/algorithms/code/README.md"
+  "README.md"
+  'gfm-mode
+  '(company-box-mode company-mode corfu-mode evil-collection-unimpaired-mode evil-local-mode display-line-numbers-mode eldoc-mode font-lock-mode)
+  40
+  '(100 nil)
+  nil
+  nil
+  '((tab-width . 4) (buffer-display-time 26006 13408 273121 660000) (buffer-file-coding-system . undecided-unix) (overwrite-mode) (truncate-lines))
+  '((mark-ring (83 226 40))))
+
+(desktop-create-buffer 208
+  "/Users/dmitryivanov/dev/SmartPlacements/advertisers/frontend/src/core/advertPage/index.ts"
+  "index.ts"
+  'typescript-ts-mode
+  '(company-box-mode corfu-mode evil-collection-unimpaired-mode evil-local-mode display-line-numbers-mode rainbow-delimiters-mode lsp-mode font-lock-mode flymake-mode lsp-diagnostics-mode lsp-headerline-breadcrumb-mode lsp-modeline-code-actions-mode lsp-modeline-diagnostics-mode lsp-modeline-workspace-status-mode lsp-ui-doc-mode lsp-ui-sideline-mode lsp-ui-mode lsp-managed-mode eldoc-mode company-mode lsp-completion-mode)
+  293
+  '(293 nil)
+  nil
+  nil
+  '((buffer-display-time 26006 4444 932728 709000) (buffer-file-coding-system . undecided-unix) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/Users/dmitryivanov/dev/devops/deployments/env/ah-staging/values/sp/all.yaml"
+  "all.yaml"
+  'yaml-ts-mode
+  '(company-box-mode company-mode corfu-mode evil-collection-unimpaired-mode evil-local-mode display-line-numbers-mode font-lock-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-display-time 26006 4286 613300 709000) (buffer-file-coding-system . undecided-unix) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  nil
+  "frontend"
+  'dired-mode
+  '(company-box-mode company-mode corfu-mode evil-collection-unimpaired-mode evil-local-mode display-line-numbers-mode font-lock-mode)
+  1369
+  '(1369 nil)
+  t
+  '("/Users/dmitryivanov/dev/SmartPlacements/advertisers/frontend/")
+  '((buffer-display-time 26006 4263 767105 709000) (overwrite-mode))
+  '((mark-ring (1369))))
+
+(desktop-create-buffer 208
+  "/Users/dmitryivanov/dev/courses-local/algorithms/index.md"
+  "index.md"
+  'markdown-mode
+  '(company-box-mode company-mode corfu-mode evil-collection-unimpaired-mode evil-local-mode display-line-numbers-mode eldoc-mode font-lock-mode)
+  1310
+  '(1310 nil)
+  nil
+  nil
+  '((tab-width . 4) (buffer-display-time 26006 4729 811013 349000) (buffer-file-coding-system . utf-8-unix) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  nil
+  "algorithms"
+  'dired-mode
+  '(company-box-mode company-mode corfu-mode evil-collection-unimpaired-mode evil-local-mode display-line-numbers-mode font-lock-mode)
+  287
+  '(287 nil)
+  t
+  '("/Users/dmitryivanov/dev/courses-local/algorithms/")
+  '((buffer-display-time 26006 18229 998741 549000) (overwrite-mode))
+  '((mark-ring (287 287 296))))
+
+(desktop-create-buffer 208
+  "/opt/homebrew/Cellar/emacs-plus@29/29.1/share/emacs/29.1/etc/COPYING"
+  "COPYING"
+  'fundamental-mode
+  '(company-box-mode company-mode corfu-mode goto-address-mode view-mode evil-local-mode font-lock-mode display-line-numbers-mode evil-collection-unimpaired-mode)
+  30778
+  '(30778 nil)
+  t
+  nil
+  '((buffer-display-time 26006 25126 637302 0) (buffer-file-coding-system . undecided-unix) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  nil
+  "*info*"
+  'Info-mode
+  '(company-box-mode company-mode corfu-mode display-line-numbers-mode evil-local-mode evil-collection-unimpaired-mode font-lock-mode isearch-fold-quotes-mode)
+  841060
+  '(841060 nil)
+  t
+  '("/opt/homebrew/Cellar/emacs-plus@29/29.1/share/info/emacs/emacs" "Tab Stops" ((history ("/opt/homebrew/Cellar/emacs-plus@29/29.1/share/info/emacs/emacs" "Indentation Commands" 838595) ("/opt/homebrew/Cellar/emacs-plus@29/29.1/share/info/emacs/emacs" "Indentation" 837430))))
+  '((tab-width . 8) (buffer-display-time 26006 20191 298429 913000) (buffer-file-coding-system . utf-8-unix) (overwrite-mode) (case-fold-search . t))
+  '((mark-ring (838254 838254 835534))))
+

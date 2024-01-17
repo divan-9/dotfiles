@@ -1,0 +1,5 @@
+;;; -*- lisp-data -*-
+(("~/dev/SponsoredProducts/")
+ ("~/dev/SmartPlacements/advertisers/")
+ ("~/dev/courses-local/")
+ ("~/dev/devops/deployments/"))

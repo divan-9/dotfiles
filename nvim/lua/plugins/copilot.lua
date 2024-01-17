@@ -5,16 +5,19 @@ function M.config()
         suggestion = {
             auto_trigger = true,
             keymap = {
-               accept = "<C-L>",
-               accept_word = false,
-               accept_line = false,
-               next = "<M-]>",
-               prev = "<M-[>",
-               dismiss = "<C-\\>",
+                accept = "<C-L>",
+                accept_word = false,
+                accept_line = false,
+                next = "<M-]>",
+                prev = "<M-[>",
+                dismiss = "<C-\\>",
             },
         },
         filetypes = {
             yaml = true,
+            clojure = false,
+            rust = false,
+            typescript = false,
         },
     })
 end

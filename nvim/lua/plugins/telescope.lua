@@ -5,10 +5,10 @@ local M = {
 M.config = function()
     local telescope = require("telescope")
 
-    telescope.setup{
+    telescope.setup {
         extensions = {
             ["ui-select"] = {
-                require("telescope.themes").get_cursor{}
+                require("telescope.themes").get_cursor {}
             }
         },
         defaults = {
@@ -17,6 +17,11 @@ M.config = function()
             layout_strategy = "vertical",
             layout_config = { height = 0.95, width = 0.95 },
         },
+        pickers = {
+            find_files = {
+                find_command = { "fd", "-i", "--type", "f", "--strip-cwd-prefix" }
+            },
+        }
     }
 
     telescope.load_extension("ui-select")
@@ -25,7 +30,7 @@ end
 
 M.dependencies = {
     {
-        "nvim-telescope/telescope-fzf-native.nvim", 
+        "nvim-telescope/telescope-fzf-native.nvim",
         build = "make",
     },
     {

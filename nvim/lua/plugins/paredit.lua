@@ -4,7 +4,6 @@ return {
         local paredit = require("nvim-paredit")
         paredit.setup({
             -- should plugin use default keybindings? (default = true)
-            use_default_keys = true,
             -- sometimes user wants to restrict plugin to certain file types only
             -- defaults to all supported file types including custom lang
             -- extensions (see next section)

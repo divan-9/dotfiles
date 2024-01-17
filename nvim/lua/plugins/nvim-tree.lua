@@ -1,5 +1,4 @@
 local M = { "kyazdani42/nvim-tree.lua" }
-
 M.dependencies = { "kyazdani42/nvim-web-devicons" }
 
 local HEIGHT_RATIO = 0.9 -- You can change this
@@ -56,7 +55,7 @@ local opts = {
     },
     view                = {
         float = {
-            enable = true,
+            enable = false,
             open_win_config = function()
                 local screen_w = vim.opt.columns:get()
                 local screen_h = vim.opt.lines:get() - vim.opt.cmdheight:get()
@@ -100,20 +99,27 @@ local opts = {
         local api = require('nvim-tree.api')
 
         local function opts(desc)
-            return { desc = 'nvim-tree: ' .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+            return {
+                desc = 'nvim-tree: ' .. desc,
+                buffer = bufnr,
+                noremap = true,
+                silent = true,
+                nowait = true
+            }
         end
 
         local mappings = {
             -- BEGIN_DEFAULT_ON_ATTACH
             ["<C-]>"] = { api.tree.change_root_to_node, "CD" },
-            -- ["<C-e>"] = { api.node.open.replace_tree_buffer, "Open: In Place" },
+            ["<C-e>"] = { api.node.open.replace_tree_buffer, "Open: In Place" },
             ["<C-k>"] = { api.node.show_info_popup, "Info" },
             ["<C-r>"] = { api.fs.rename_sub, "Rename: Omit Filename" },
             ["<C-t>"] = { api.node.open.tab, "Open: New Tab" },
             ["<C-v>"] = { api.node.open.vertical, "Open: Vertical Split" },
             ["<C-x>"] = { api.node.open.horizontal, "Open: Horizontal Split" },
             ["<BS>"] = { api.node.navigate.parent_close, "Close Directory" },
-            ["<CR>"] = { api.node.open.edit, "Open" },
+            ["<CR>"] = { api.node.open.replace_tree_buffer, "Open: In Place" },
+            -- ["<CR>"] = { api.node.open.edit, "Open" },
             ["<Tab>"] = { api.node.open.preview, "Open Preview" },
             [">"] = { api.node.navigate.sibling.next, "Next Sibling" },
             ["<"] = { api.node.navigate.sibling.prev, "Previous Sibling" },
@@ -148,7 +154,7 @@ local opts = {
             ["q"] = { api.tree.close, "Close" },
             ["r"] = { api.fs.rename, "Rename" },
             ["R"] = { api.tree.reload, "Refresh" },
-            ["s"] = { api.node.run.system, "Run System" },
+            -- ["s"] = { api.node.run.system, "Run System" },
             ["S"] = { api.tree.search_node, "Search" },
             ["U"] = { api.tree.toggle_custom_filter, "Toggle Hidden" },
             ["W"] = { api.tree.collapse_all, "Collapse" },

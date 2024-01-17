@@ -1,0 +1,44 @@
+
+;; ----- amx-history -----
+(
+ toggle-theme
+ package-delete
+ standard-themes-toggle
+ package-install
+ package-refresh-contents
+ csharp-ts-mode
+ treesit-inspect-mode
+)
+
+;; ----- amx-data -----
+(
+ (cd . 1)
+ (recentf . 1)
+ (evil-ex-nohighlight . 1)
+ (comment-set-column . 1)
+ (eval-region . 2)
+ (find-file . 2)
+ (compile . 2)
+ (ns-find-file . 1)
+ (dired . 6)
+ (all-the-icons-install-fonts . 1)
+ (package-autoremove . 7)
+ (counsel-git-log . 3)
+ (vc-git-stash-show . 1)
+ (typescript-ts-mode . 1)
+ (treesit-install-language-grammar . 18)
+ (counsel-mode . 1)
+ (counsel-ag . 4)
+ (desktop-clear . 1)
+ (desktop-remove . 2)
+ (package-delete . 5)
+ (counsel-M-x . 1)
+ (csharp-ts-mode . 6)
+ (toggle-truncate-lines . 2)
+ (theme-choose-variant . 1)
+ (treesit-inspect-mode . 3)
+ (package-refresh-contents . 1)
+ (package-install . 1)
+ (standard-themes-toggle . 14)
+ (toggle-theme . 1)
+)

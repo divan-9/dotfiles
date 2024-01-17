@@ -2,9 +2,6 @@ local M = { "nvim-treesitter/nvim-treesitter" }
 
 M.config = function()
     require 'nvim-treesitter.configs'.setup {
-        context_commentstring = {
-            enable = true
-        },
         ensure_installed = "all",
         auto_install = true,
         highlight = {
@@ -27,13 +24,13 @@ M.config = function()
             },
             highlight_current_scope = { enable = false },
             smart_rename = {
-                enable = true,
+                enable = false,
                 keymaps = {
                     smart_rename = "grr",
                 },
             },
             navigation = {
-                enable = true,
+                enable = false,
                 keymaps = {
                     goto_definition = "gnd",
                     list_definitions = "gnD",

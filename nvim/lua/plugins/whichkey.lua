@@ -16,18 +16,13 @@ local normal_mappings = {
     },
     ["<leader>"] = {
         ["r"] = { "<Plug>(coc-rename)", "Coc: Rename" },
-        -- ["r"] = { ":lua vim.lsp.buf.rename()<cr>", "Rename" },
         ["d"] = { ":<C-u>CocList diagnostics<cr>", "Coc: Diagnostics" },
-        -- ["d"] = { ":Diag<cr>", "Diagnostics" },
-        -- ["n"] = { ":CocNext<cr>", "Coc: Next" },
-        -- ["m"] = { ":CocPrev<cr>", "Coc: Prev" },
-        -- ["n"] = { "<cmd>lua vim.diagnostic.goto_prev()<cr>", "Next diagnostic" },
-        -- ["m"] = { "<cmd>lua vim.diagnostic.goto_next()<cr>", "Prev diagnostic" },
         ["i"] = {
             name = "+insert",
             ["g"] = { uuid.insert_v4, "GUID" }
         },
         ["w"] = { ":w<cr>", "Write buffer" },
+        ["W"] = { ":setlocal wrap! linebreak<cr>", "Toggle wrap" },
         ["L"] = {
             name = "+configs",
             ["c"] = { ":e ~/.config/nvim/init.lua<cr>", "init.lua" },
@@ -36,10 +31,11 @@ local normal_mappings = {
         },
         ["l"] = {
             name = "+lsp",
-            -- ["f"] = { ":lua vim.lsp.buf.format()<cr>", "Format buffer" },
             ["f"] = { "<Plug>(coc-format)", "Coc: Format" },
             ["c"] = { ":ConjureConnect<cr>", "Conjure Connect" },
-            ["r"] = { ":Lein", "Start lein repl using vim-jack-in" }
+            ["r"] = { ":Lein", "Start lein repl using vim-jack-in" },
+            ["d"] = { ":Clj -M:dev -e \"(require '[flow-storm.api :as fs-api]) (fs-api/local-connect)\"<cr>",
+                "Start flow-storm repl" }
         },
         ["s"] = {
             ["s"] = { ":Telescope live_grep<cr>", "Live grep" }
@@ -72,16 +68,10 @@ local normal_mappings = {
         ["u"] = { "<Plug>(coc-references)", "Coc: Goto usages" },
         ["i"] = { "<Plug>(coc-implementation)", "Coc: Goto implementation" },
         ["d"] = { "<Plug>(coc-definition)", "Coc: Goto definition" },
-        -- ["U"] = { ":lua require('telescope.builtin').lsp_references()<cr>", "Preview usages" },
-        -- ["u"] = { ":lua vim.lsp.buf.references()<cr>", "Goto usages" },
-        -- ["i"] = { ":lua vim.lsp.buf.implementation()<cr>", "Goto implementation" },
-        -- ["d"] = { ":lua vim.lsp.buf.definition()<cr>", "Goto definitions" },
-        -- ["D"] = { ":lua vim.lsp.buf.declaration()<cr>", "Goto definitions" },
         ["h"] = { "^", "Go to the start of the line" },
         ["l"] = { "$", "Go to the end of the line" },
     },
     ["d"] = {
-        -- ["o"] = { ":lua vim.lsp.buf.code_action()<cr>", "Code actions" },
         ["o"] = { "<Plug>(coc-codeaction-cursor)", "Coc: Code actions" },
         ["r"] = { "<Plug>(coc-codeaction-refactor)", "Coc: Code actions refactor" },
     },
@@ -89,9 +79,16 @@ local normal_mappings = {
         ["k"] = { ":Dotnet<cr>", "Build dotnet solution" },
     },
     ["<C-j>"] = { ":2ToggleTerm<cr>", "Toggle Term" },
-    ["<C-e>"] = { ":NvimTreeToggle<cr>", "NvimTree" },
+    ["<C-e>"] = {
+        function()
+            require('nvim-tree.api').tree.toggle({ current_window = true })
+        end,
+        "NvimTree"
+    },
+    -- ["<C-e>"] = { ":NvimTreeToggle<cr>", "NvimTree" },
+    -- ["<C-e>"] = { ":Ex<cr>", "Explore" },
     ["<C-n>"] = { ":cnext<cr>", "Next Quick Fix" },
-    ["<C-m>"] = { ":cprev<cr>", "Prev Quick Fix" },
+    ["<C-p>"] = { ":cprev<cr>", "Prev Quick Fix" },
     ["U"] = { "<C-r>", "Redo" },
 }
 
@@ -105,23 +102,7 @@ local visual_mappings = {
     },
 }
 
--- TODO: delete
--- vim.api.nvim_create_autocmd({"BufWritePre"}, {
---     pattern = "*.cs,*.lua",
---     callback = function()
---         vim.lsp.buf.format()
---     end
--- })
-
--- TODO: delete
--- vim.api.nvim_create_autocmd({"BufWritePre"}, {
---     pattern = "*.clj,*.edn",
---     callback = function()
---         vim.lsp.buf.format()
---     end
--- })
-
--- TODO: delete
+-- TODO: Find appropriate place for this
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
     pattern = "*.ts,*.json,*.md",
     callback = function()
