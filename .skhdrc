@@ -13,7 +13,7 @@ cmd + alt - d: false
      # "emacs" : true
  # ]
 
-rcmd - c: open /Applications/Cron.app
+rcmd - c: open /Applications/Notion\ Calendar.app
 rcmd - z: open /Applications/Zed.app
 rcmd + alt - c: open "/Applications/Visual Studio Code.app"
 rcmd - m: open /System/Applications/Mail.app

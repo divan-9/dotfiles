@@ -1,5 +1,0 @@
-git status
-git add .
-git status
-git commit -m"Throttle offline service even more"
-git push
