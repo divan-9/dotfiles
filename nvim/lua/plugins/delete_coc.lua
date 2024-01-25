@@ -1,5 +1,6 @@
 local M = { "neoclide/coc.nvim" }
 M.build = "yarn install --frozen-lockfile"
+M.enabled = false
 
 function M.config()
     local keyset = vim.keymap.set

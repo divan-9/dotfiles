@@ -36,26 +36,10 @@ vim.cmd [[
     autocmd FileType qf if (getwininfo(win_getid())[0].loclist != 1) | wincmd J | endif")
 ]]
 
-vim.cmd [[
-    autocmd FileType html setlocal shiftwidth=2 tabstop=2
-    autocmd FileType vue setlocal shiftwidth=2 tabstop=2
-    autocmd FileType vue setlocal shiftwidth=2 tabstop=2
-]]
-
-vim.api.nvim_create_autocmd({ "BufRead" }, {
-    pattern = "*.md",
-    callback = function()
-        vim.cmd [[
-            setlocal wrap linebreak nolist
-        ]]
-    end
-})
-
-vim.api.nvim_create_autocmd({ "BufRead" }, {
-    pattern = { "*.props", "*.csproj", "*.targets" },
-    callback = function()
-        vim.cmd [[
-            setfiletype xml
-        ]]
-    end
+vim.filetype.add({
+  extension = {
+    props = 'xml',
+    csproj = 'xml',
+    targets = 'xml',
+  }
 })

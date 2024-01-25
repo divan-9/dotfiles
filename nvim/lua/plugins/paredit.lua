@@ -1,5 +1,6 @@
 return {
     "julienvincent/nvim-paredit",
+    dependencies = { 'nvim-treesitter/nvim-treesitter' },
     config = function()
         local paredit = require("nvim-paredit")
         paredit.setup({
