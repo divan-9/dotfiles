@@ -26,6 +26,8 @@ M.config = function()
 
     telescope.load_extension("ui-select")
     telescope.load_extension("fzf")
+
+    require('keymaps').telescope(telescope)
 end
 
 M.dependencies = {
