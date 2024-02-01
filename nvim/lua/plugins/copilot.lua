@@ -14,6 +14,7 @@ function M.config()
             },
         },
         filetypes = {
+            markdown = true,
             yaml = true,
             clojure = false,
             rust = false,

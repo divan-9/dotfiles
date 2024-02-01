@@ -31,10 +31,10 @@ rcmd - e: open /opt/homebrew/Cellar/emacs-plus@29/29.1/Emacs.app
 # rcmd - o: open /Applications/Opera.app
 rcmd - o: open /Applications/Obsidian.app
 rcmd - g: open /users/dmitryivanov/applications/ChatGPT.app
-rcmd + alt - t: open /Applications/Telegram.app
-rcmd + alt - m: open /System/Applications/Music.app
-rcmd + alt - v: scutil --nc start d.ivanov && osascript -e 'display notification "Connection started" with title "VPN: d.ivanov"'
-rcmd + alt + shift - v: scutil --nc stop d.ivanov && osascript -e 'display notification "Connection stopped" with title "VPN: d.ivanov"'
+rcmd + fn - t: open /Applications/Telegram.app
+rcmd + fn - m: open /System/Applications/Music.app
+rcmd + fn - v: scutil --nc start d.ivanov && osascript -e 'display notification "Connection started" with title "VPN: d.ivanov"'
+rcmd + fn + shift - v: scutil --nc stop d.ivanov && osascript -e 'display notification "Connection stopped" with title "VPN: d.ivanov"'
 
 
 # https://github.com/julian-heng/yabai-config

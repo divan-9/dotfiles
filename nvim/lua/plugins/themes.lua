@@ -60,13 +60,16 @@ return {
                         wave = {
                             syn = {
                                 -- statement = palette.surimiOrange,
-                                keyword = palette.roninYellow,
+                                -- keyword = palette.roninYellow,
+                                -- keyword = palette.surimiOrange,
+                                keyword = "#FADA5E",
                                 -- type = palette.roninYellow,
                             },
                             ui = {
                                 -- better selection
                                 -- bg_visual = palette.sumiInk6,
-                                bg_visual = "#F8DE7E",
+                                -- bg_visual = "#F8DE7E",
+                                bg_visual = "#AFD7FF",
                                 -- bg_visual = "#7daea3",
                                 -- nontext = "#b1b1b1",
                                 nontext = "#d1d0c5",
@@ -92,7 +95,7 @@ return {
                         FloatBorder = { bg = "none" },
                         FloatTitle = { bg = "none" },
                         NormalDark = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m3 },
-
+                        CursorLineNr = { fg = theme.diag.warning, bg = theme.ui.bg_gutter, bold = false },
                         -- Fix for lighspeed
                         LightspeedLabel = {
                             fg = theme.syn.string,

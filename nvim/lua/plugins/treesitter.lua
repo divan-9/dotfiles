@@ -1,9 +1,12 @@
 return {
     'nvim-treesitter/nvim-treesitter',
     config = function()
-        require'nvim-treesitter.configs'.setup {
+        require 'nvim-treesitter.configs'.setup {
+            modules = {},
+            sync_install = false,
+            ignore_install = {},
             auto_install = true,
-            ensure_installed = { 
+            ensure_installed = {
                 "c_sharp",
                 "typescript",
                 "javascript",
@@ -12,10 +15,11 @@ return {
                 "lua",
                 "rust",
                 "go",
-                "clojure" 
+                "clojure"
             },
             highlight = {
-                enable = true
+                enable = true,
+                disable = { "markdown" },
             },
             incremental_selection = {
                 enable = true,

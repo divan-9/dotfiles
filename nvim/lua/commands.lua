@@ -10,7 +10,7 @@ vim.api.nvim_create_user_command(
         local args = opts.fargs
         table.insert(args, '--vimgrep')
 
-        print(vim.inspect(args));
+        vim.notify(vim.inspect(args));
 
         local job = Job:new({
             command = '/opt/homebrew/bin/ag',
@@ -56,7 +56,7 @@ vim.api.nvim_create_user_command(
             return
         end
 
-        print("Building solution: " .. solution)
+        vim.notify("Building solution: " .. solution)
 
         local lines = {}
         local job = Job:new({
@@ -69,7 +69,7 @@ vim.api.nvim_create_user_command(
                 end
             end,
             on_exit = vim.schedule_wrap(function(j, code)
-                print("Build finished. Code=" .. code)
+                vim.notify("Build finished. Code=" .. code)
                 if code ~= 0 then
                     vim.fn.setqflist({}, "r", {
                         title = "Build",

@@ -30,8 +30,10 @@ hi Error           ctermfg=9   ctermbg=NONE guifg=#FF0000 guibg=NONE
 hi SpellBad        ctermfg=160 ctermbg=NONE guifg=#E06C75 guibg=NONE
 hi TODO            ctermfg=135 ctermbg=NONE guifg=#AF5FFF guibg=NONE cterm=italic
 hi linenr          ctermfg=238 ctermbg=235  guifg=#444444 guibg=#262626 term=bold cterm=bold
-hi CursorLine                  ctermbg=236  guifg=NONE guibg=#444444 cterm=NONE
-hi CursorLineNR    ctermfg=254 ctermbg=235  guifg=#E4E4E4 guibg=#262626 term=bold cterm=bold gui=bold
+" hi CursorLine                  ctermbg=236  guifg=NONE guibg=#444444 cterm=NONE
+hi CursorLine                  ctermbg=236  guifg=NONE guibg=#333333 cterm=NONE
+" hi CursorLineNR    ctermfg=254 ctermbg=235  guifg=#E4E4E4 guibg=#262626 term=bold cterm=bold gui=bold
+hi CursorLineNR    ctermfg=254 ctermbg=235  guifg=#E4E4E4 guibg=#262626 term=NONE cterm=NONE gui=NONE
 hi Search          ctermfg=234 ctermbg=153  guifg=#1C1C1C guibg=#AFD7FF term=bold cterm=bold gui=bold
 hi IncSearch       ctermfg=234 ctermbg=158  guifg=#1C1C1C guibg=#87FFAF term=bold cterm=bold gui=bold
 hi WildMenu        ctermfg=254 ctermbg=235  guifg=#E4E4E4 guibg=#262626
