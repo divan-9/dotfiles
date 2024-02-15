@@ -3,6 +3,11 @@ return {
     config = function()
         local format_on_save = require("format-on-save")
         local formatters = require("format-on-save.formatters")
+
+        local dprint = formatters.shell({
+            cmd = { "dprint", "fmt", "--stdin", "%" }
+        })
+
         format_on_save.setup({
             exclude_path_patterns = {
                 "/node_modules/",
@@ -14,9 +19,10 @@ return {
                 rust = formatters.lsp,
                 cs = formatters.lsp,
                 lua = formatters.lsp,
-                typescript = formatters.lsp,
-                javascript = formatters.lsp,
-                json = formatters.prettierd,
+                md = dprint,
+                typescript = dprint,
+                javascript = dprint,
+                json = dprint,
             }
         })
     end

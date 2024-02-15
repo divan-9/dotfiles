@@ -27,7 +27,7 @@ vim.opt.background = "dark"
 vim.o.updatetime = 250
 vim.opt.scrolloff = 5
 vim.o.signcolumn = "number"
-
+vim.o.completeopt = "menu,noinsert,noselect,preview"
 -- Position the (global) quickfix window at the very bottom of the window
 -- (useful for making sure that it appears underneath splits)
 -- NOTE: Using a check here to make sure that window-specific location-lists
@@ -37,9 +37,9 @@ vim.cmd [[
 ]]
 
 vim.filetype.add({
-  extension = {
-    props = 'xml',
-    csproj = 'xml',
-    targets = 'xml',
-  }
+    extension = {
+        props = 'xml',
+        csproj = 'xml',
+        targets = 'xml',
+    }
 })
