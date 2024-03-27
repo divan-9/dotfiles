@@ -1,5 +1,7 @@
 local M = { "zbirenbaum/copilot.lua" }
 
+M.enabled = false;
+
 function M.config()
     require("copilot").setup({
         suggestion = {

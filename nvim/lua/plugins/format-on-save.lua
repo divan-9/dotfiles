@@ -8,6 +8,10 @@ return {
             cmd = { "dprint", "fmt", "--stdin", "%" }
         })
 
+        local xmllint = formatters.shell({
+            cmd = { "xmllint", "--format", "-" }
+        })
+
         format_on_save.setup({
             exclude_path_patterns = {
                 "/node_modules/",
@@ -23,6 +27,7 @@ return {
                 typescript = dprint,
                 javascript = dprint,
                 json = dprint,
+                xml = xmllint,
             }
         })
     end

@@ -11,6 +11,14 @@ return {
         "pmizio/typescript-tools.nvim",
     },
     config = function()
+        vim.diagnostic.config({
+            virtual_text = false
+        })
+
+        -- Show line diagnostics automatically in hover window
+        vim.o.updatetime = 250
+        vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
+
         local fidget = require("fidget")
         local lsp_zero = require('lsp-zero')
         local lsp = require('lspconfig')
@@ -55,7 +63,9 @@ return {
         lsp.omnisharp.setup({
             cmd = {
                 "dotnet",
-                "/Users/dmitryivanov/omnisharp/v1.39.10/OmniSharp.dll",
+                "/Users/dmitryivanov/omnisharp/v1.39.11/OmniSharp.dll",
+                -- "mono",
+                -- "/Users/dmitryivanov/omnisharp/omnisharp-osx/omnisharp/OmniSharp.exe",
                 '--languageserver',
                 '--hostPID',
                 tostring(vim.fn.getpid()),
