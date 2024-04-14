@@ -19,7 +19,7 @@ M.config = function()
         },
         pickers = {
             find_files = {
-                find_command = { "fd", "-i", "--type", "f", "--strip-cwd-prefix" }
+                find_command = { "fd", "-u", "-i", "--type", "f", "--strip-cwd-prefix" }
             },
         }
     }
