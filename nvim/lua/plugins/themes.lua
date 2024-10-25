@@ -5,9 +5,9 @@ return {
         priority = 1000,
         config = function()
             vim.g.sonokai_style = "maia"
-            -- vim.cmd [[
-            --     hi Visual ctermfg=235 ctermbg=153  guifg=#262626 guibg=#AFD7FF
-            -- ]]
+            vim.g.sonokai_colors_override = {
+                bg3 = { "#4e5054", "235" }
+            }
         end
     },
     {
