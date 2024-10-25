@@ -1,39 +1,13 @@
 return {
     {
-        "AlexvZyl/nordic.nvim",
-        lazy = false,
-        priority = 1000,
-        config = function()
-            require("nordic").setup({
-                override = {
-                    Normal = { bg = "#0d181a" },
-                    Visual = { bg = "#6A3900" },
-                    VisualNOS = { bg = "#6A3900" },
-                }
-            })
-        end
-    },
-    {
-        "EdenEast/nightfox.nvim",
-        lazy = false,
-        priority = 1000,
-        config = function()
-            require('nightfox').setup({
-                palettes = {
-                    terafox = {
-                        bg1 = "#0d181a", -- Default bg
-                    },
-                }
-            })
-        end
-    },
-    { "rmehri01/onenord.nvim" },
-    {
         "sainnhe/sonokai",
         lazy = false,
         priority = 1000,
         config = function()
             vim.g.sonokai_style = "maia"
+            -- vim.cmd [[
+            --     hi Visual ctermfg=235 ctermbg=153  guifg=#262626 guibg=#AFD7FF
+            -- ]]
         end
     },
     {
@@ -95,6 +69,7 @@ return {
                         FloatBorder = { bg = "none" },
                         FloatTitle = { bg = "none" },
                         NormalDark = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m3 },
+                        DiagnosticUnderlineHint = { underline = false },
                         CursorLineNr = { fg = theme.diag.warning, bg = theme.ui.bg_gutter, bold = false },
                         -- Fix for lighspeed
                         LightspeedLabel = {
@@ -141,7 +116,8 @@ return {
                 end
             })
 
-            vim.cmd([[colorscheme kanagawa]])
+            vim.cmd([[colorscheme sonokai]])
+            -- vim.cmd([[colorscheme kanagawa]])
             -- vim.cmd([[colorscheme typewriter-night]])
             -- vim.cmd([[colorscheme terafox]])
             -- vim.cmd([[colorscheme catppuccin-mocha]])

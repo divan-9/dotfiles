@@ -19,7 +19,7 @@ return {
             },
             highlight = {
                 enable = true,
-                disable = { "markdown" },
+                disable = { "markdown", "vim", "help" },
             },
             incremental_selection = {
                 enable = true,

@@ -12,6 +12,10 @@ return {
             cmd = { "xmllint", "--format", "-" }
         })
 
+        local gofmt = function()
+            require("go.format").goimports()
+        end
+
         format_on_save.setup({
             exclude_path_patterns = {
                 "/node_modules/",
@@ -28,6 +32,7 @@ return {
                 javascript = dprint,
                 json = dprint,
                 xml = xmllint,
+                go = formatters.lsp,
             }
         })
     end

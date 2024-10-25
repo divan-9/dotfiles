@@ -16,14 +16,14 @@ rcmd - c: open /Applications/Notion\ Calendar.app
 rcmd - z: open /Applications/Zed.app
 rcmd - m: open /System/Applications/Mail.app
 # rcmd - t: open /Applications/iTerm.app
-rcmd - t: open /Applications/Alacritty.app
+#rcmd - t: open /Applications/Alacritty.app
 rcmd - a: open /Applications/Anki.app
-# rcmd - t: open /Applications/Kitty.app
+rcmd - t: open /Applications/Kitty.app
 # rcmd - s: open /Applications/Safari.app
 rcmd - s: open /Applications/Firefox.app
 # rcmd - l: open /Applications/Slack.app
 rcmd - d: open /Applications/Discord.app
-# rcmd - b: open /Applications/Brave\ Browser.app
+rcmd - b: open /Applications/Brave\ Browser.app
 # rcmd - e: open /Applications/Lens.app
 # rcmd - e: open /Applications/Emacs.app
 rcmd - e: open /opt/homebrew/Cellar/emacs-plus@29/29.1/Emacs.app

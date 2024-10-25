@@ -81,7 +81,8 @@ function M.telescope(module)
     register_normal({
         ["<leader>ss"] = { ":Telescope live_grep<CR>", "Telescope: Live grep" },
         ["<leader>f"]  = { ":Telescope find_files hidden=true<CR>", "Telescope: Find files" },
-        ["<leader>o"]  = { ":Telescope oldfiles<CR>", "Telescope: Old files" },
+        -- ["<leader>o"]  = { ":Telescope oldfiles<CR>", "Telescope: Old files" },
+        ["<leader>p"]  = { function() module.extensions.recent_files.pick() end, "Telescope: Old files" },
         ["<leader>bb"] = { ":Telescope buffers<cr>", "Telescope: List buffers" },
         ["<leader>sm"] = { ":Telescope keymaps<cr>", "Telescope: Keymaps" },
     })

@@ -40,6 +40,9 @@ return {
             fidget.notify("LSP client attached");
         end)
 
+        local cfg = require('go.lsp').config()
+        lsp.gopls.setup(cfg)
+
         lsp.lua_ls.setup({
             settings = {
                 Lua = {
@@ -78,7 +81,8 @@ return {
                 ["textDocument/definition"] = require('omnisharp_extended').handler,
             },
             on_attach = function(client, bufnr)
-                client.server_capabilities.semanticTokensProvider = nil
+                -- client.server_capabilities.semanticTokensProvider = true
+                -- client.server_capabilities.semanticTokensProvider = nil
             end
         });
 
