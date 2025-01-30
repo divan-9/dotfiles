@@ -1,6 +1,6 @@
 local M = { "zbirenbaum/copilot.lua" }
 
-M.enabled = false;
+M.enabled = true;
 
 function M.config()
     require("copilot").setup({
@@ -20,7 +20,7 @@ function M.config()
             yaml = true,
             clojure = false,
             rust = false,
-            typescript = false,
+            typescript = true,
         },
     })
 end

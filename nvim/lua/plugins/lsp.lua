@@ -3,8 +3,9 @@ return {
     branch = 'v3.x',
     dependencies = {
         'neovim/nvim-lspconfig',
-        'hrsh7th/nvim-cmp',
-        'hrsh7th/cmp-nvim-lsp',
+        'saghen/blink.cmp',
+        -- 'hrsh7th/nvim-cmp',
+        -- 'hrsh7th/cmp-nvim-lsp',
         'L3MON4D3/LuaSnip',
         "Hoffs/omnisharp-extended-lsp.nvim",
         "j-hui/fidget.nvim",
@@ -37,7 +38,7 @@ return {
                 buffer = bufnr
             })
 
-            fidget.notify("LSP client attached");
+            fidget.notify("LSP client attached:" .. client.name);
         end)
 
         local cfg = require('go.lsp').config()
@@ -79,13 +80,44 @@ return {
             enable_import_completion = true,
             handlers = {
                 ["textDocument/definition"] = require('omnisharp_extended').handler,
+                ["textDocument/publishDiagnostics"] = vim.lsp.with(
+                    vim.lsp.diagnostic.on_publish_diagnostics, {
+                        virtual_text = false
+                    }
+                ),
             },
             on_attach = function(client, bufnr)
+                fidget.notify("OmniSharp client attaching...");
                 -- client.server_capabilities.semanticTokensProvider = true
                 -- client.server_capabilities.semanticTokensProvider = nil
             end
         });
 
-        require('typescript-tools').setup({})
+        lsp.volar.setup({
+            init_options = {
+                vue = {
+                    -- disable hybrid mode
+                    hybridMode = false,
+                },
+            },
+            on_attach = function(client, bufnr)
+                fidget.notify("Volar client attaching...");
+            end
+        });
+
+        capabilities = require('blink.cmp').get_lsp_capabilities()
+        require('typescript-tools').setup({
+            filetypes = {
+                "typescript",
+                "javascript",
+                -- "vue",
+            },
+            settings = {
+                capabilities = capabilities,
+                tsserver_plugins = {
+                    "@vue/typescript-plugin"
+                }
+            }
+        })
     end
 }
