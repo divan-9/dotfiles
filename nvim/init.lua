@@ -16,7 +16,11 @@ end
 
 vim.opt.runtimepath:prepend(lazypath)
 
-require("lazy").setup("plugins", {})
+require("lazy").setup("plugins", {
+    rocks = {
+        hererocks = true, -- recommended if you do not have global installation of Lua 5.1.
+    },
+})
 
 vim.api.nvim_create_autocmd("User", {
     pattern = "VeryLazy",

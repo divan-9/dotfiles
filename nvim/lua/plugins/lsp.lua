@@ -13,7 +13,9 @@ return {
     },
     config = function()
         vim.diagnostic.config({
-            virtual_text = false
+            virtual_text = false,
+            underline = false,
+            update_in_insert = false,
         })
 
         -- Show line diagnostics automatically in hover window
@@ -101,6 +103,7 @@ return {
                 },
             },
             on_attach = function(client, bufnr)
+                vim.opt.shiftwidth = 2
                 fidget.notify("Volar client attaching...");
             end
         });

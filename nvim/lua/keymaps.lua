@@ -63,11 +63,30 @@ function M.oil(module)
     })
 end
 
+function M.trouble(module)
+    register_normal({
+        ["<leader>]d"] = {
+            function()
+                module.next()
+                module.jump_only()
+            end,
+            "Trouble: next" },
+        ["<leader>[d"] = {
+            function()
+                module.next()
+                module.jump_only()
+            end,
+            "Trouble: prev" },
+    })
+end
+
 function M.lsp_on_attach(opts)
     register_normal({
         ["<leader>lf"] = { function() vim.lsp.buf.format({ async = true }) end, "Format buffer" },
-        ["<leader>r"] = { vim.lsp.buf.rename, "LSP: Rename" },
+        ["<leader>gd"] = { ":vsplit | lua vim.lsp.buf.definition()<CR>", "Definition in split" },
         ["do"] = { vim.lsp.buf.code_action, "LSP: Code actions" },
+        ["d+"] = { function() vim.diagnostic.enable(true) end, "Show diagnostic" },
+        ["d-"] = { function() vim.diagnostic.enable(false) end, "Hide diagnostic" },
     })
 end
 
@@ -81,6 +100,7 @@ function M.telescope(module)
     register_normal({
         ["<leader>ss"] = { ":Telescope live_grep<CR>", "Telescope: Live grep" },
         ["<leader>f"]  = { ":Telescope find_files hidden=true<CR>", "Telescope: Find files" },
+        ["<leader>r"]  = { ":Telescope resume<CR>", "Telescope: resume" },
         -- ["<leader>o"]  = { ":Telescope oldfiles<CR>", "Telescope: Old files" },
         ["<leader>p"]  = { function() module.extensions.recent_files.pick() end, "Telescope: Old files" },
         ["<leader>bb"] = { ":Telescope buffers<cr>", "Telescope: List buffers" },
@@ -89,6 +109,12 @@ function M.telescope(module)
 end
 
 function M.fugitive(module)
+end
+
+function M.themery(module)
+    register_normal({
+        ["<leader>t"] = { ":Themery<CR>", "Themery switcher" },
+    })
 end
 
 return M
