@@ -69,7 +69,7 @@ return {
         lsp.omnisharp.setup({
             cmd = {
                 "dotnet",
-                "/Users/dmitryivanov/omnisharp/v1.39.11/OmniSharp.dll",
+                vim.fn.expand("${HOME}/omnisharp/v1.39.11/OmniSharp.dll"),
                 -- "mono",
                 -- "/Users/dmitryivanov/omnisharp/omnisharp-osx/omnisharp/OmniSharp.exe",
                 '--languageserver',
