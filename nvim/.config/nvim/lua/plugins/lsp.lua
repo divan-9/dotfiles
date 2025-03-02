@@ -70,8 +70,6 @@ return {
             cmd = {
                 "dotnet",
                 vim.fn.expand("${HOME}/omnisharp/v1.39.11/OmniSharp.dll"),
-                -- "mono",
-                -- "/Users/dmitryivanov/omnisharp/omnisharp-osx/omnisharp/OmniSharp.exe",
                 '--languageserver',
                 '--hostPID',
                 tostring(vim.fn.getpid()),
