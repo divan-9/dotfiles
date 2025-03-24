@@ -77,12 +77,13 @@ return {
             config = function()
             end,
         },
+        { "fcancelinha/nordern.nvim", branch = "master", priority = 1000 },
         {
             "arcticicestudio/nord-vim",
             lazy = false,
             priority = 1000,
             config = function()
-                -- vim.o.termguicolors = true
+                vim.o.termguicolors = true
                 -- vim.o.background = 'dark'
                 -- vim.cmd.colorscheme 'nord'
                 vim.api.nvim_create_autocmd("ColorScheme", {

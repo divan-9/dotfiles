@@ -1,0 +1,17 @@
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+sudo yabai --load-sa
+
+# bsp or float (default: float)
+yabai -m config layout bsp
+#yabai -m config layout float
+
+# Override default layout for space 1 only
+# yabai -m config --space 1 layout float
+
+#yabai -m config window_topmost on
+
+#yabai -m rule --add app="Anki" space=^1 manage=off border=off 
+#yabai -m rule --add app="ChatGPT" space=^1 manage=off border=off 
+#yabai -m rule --add app="Music" space=^1 manage=off border=off 
+#yabai -m rule --add app="Firefox" space=^2
+#yabai -m rule --add app="Alacritty" space=^3
