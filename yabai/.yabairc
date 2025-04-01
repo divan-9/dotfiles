@@ -15,3 +15,9 @@ yabai -m config layout bsp
 #yabai -m rule --add app="Music" space=^1 manage=off border=off 
 #yabai -m rule --add app="Firefox" space=^2
 #yabai -m rule --add app="Alacritty" space=^3
+
+yabai -m config top_padding    10
+yabai -m config bottom_padding 10
+yabai -m config left_padding   10
+yabai -m config right_padding  10
+yabai -m config window_gap     10

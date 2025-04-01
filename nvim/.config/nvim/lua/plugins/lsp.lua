@@ -10,6 +10,11 @@ return {
         "Hoffs/omnisharp-extended-lsp.nvim",
         "j-hui/fidget.nvim",
         "pmizio/typescript-tools.nvim",
+        {
+            'mrcjkb/rustaceanvim',
+            version = '^5', -- Recommended
+            lazy = false, -- This plugin is already lazy
+        }
     },
     config = function()
         vim.diagnostic.config({
