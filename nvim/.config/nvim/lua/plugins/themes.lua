@@ -8,9 +8,13 @@ return {
             themes = {
                 {
                     name = "dark: nord",
-                    colorscheme = "nord",
+                    colorscheme = "nordern",
                     before = [[
+                        local colors = require('nordern.colors')
                         vim.opt.background = "dark"
+                        vim.api.nvim_set_hl(0, 'Property', { fg = colors.snow.c0 })
+                        vim.api.nvim_set_hl(0, 'Parameter', { fg = colors.snow.c1 })
+                        vim.api.nvim_set_hl(0, 'CopilotSuggestion', { fg = colors.aurora.purple })
                     ]]
                 },
                 {
@@ -77,7 +81,17 @@ return {
             config = function()
             end,
         },
-        { "fcancelinha/nordern.nvim", branch = "master", priority = 1000 },
+        {
+            "fcancelinha/nordern.nvim",
+            branch = "master",
+            priority = 1000,
+            opts = {
+                brigther_comments = false,
+                brighter_constants = false,
+                italic_comments = false,
+                transparent = false,
+            }
+        },
         {
             "arcticicestudio/nord-vim",
             lazy = false,

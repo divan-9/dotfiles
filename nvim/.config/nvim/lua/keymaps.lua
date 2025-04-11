@@ -83,7 +83,7 @@ end
 function M.lsp_on_attach(opts)
     register_normal({
         ["<leader>lf"] = { function() vim.lsp.buf.format({ async = true }) end, "Format buffer" },
-        ["<leader>gd"] = { ":vsplit | lua vim.lsp.buf.definition()<CR>", "Definition in split" },
+        ["<leader>gd"] = { function() require('omnisharp_extended').lsp_definition() end },
         ["do"] = { vim.lsp.buf.code_action, "LSP: Code actions" },
         ["d+"] = { function() vim.diagnostic.enable(true) end, "Show diagnostic" },
         ["d-"] = { function() vim.diagnostic.enable(false) end, "Hide diagnostic" },

@@ -1,6 +1,9 @@
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 sudo yabai --load-sa
 
+# menubar, raycast
+yabai -m signal --add event=space_changed action="open -g 'raycast://extensions/krzysztoff1/yabai/screens-menu-bar?launchType=background' > /dev/null 2>&1 &"
+# yyabai -m signal --add event=space_changed action="nohup open -g raycast://extensions/krzysztoff1/yabai/screens-menu-bar?launchType=background > /dev/null 2>&1 &"abai -m signal --add event=space_changed action="nohup open -g raycast://extensions/krzysztoff1/yabai/screens-menu-bar?launchType=background > /dev/null 2>&1 &"
 # bsp or float (default: float)
 yabai -m config layout bsp
 #yabai -m config layout float
