@@ -1,10 +1,8 @@
 return {
     'neovim/nvim-lspconfig',
-    branch = 'v3.x',
     dependencies = {
         'saghen/blink.cmp',
         "Hoffs/omnisharp-extended-lsp.nvim",
-        "j-hui/fidget.nvim",
         "pmizio/typescript-tools.nvim",
         {
             'mrcjkb/rustaceanvim',
@@ -13,20 +11,23 @@ return {
         }
     },
     config = function()
+        local capabilities = require('blink.cmp').get_lsp_capabilities()
+
         vim.diagnostic.config({
             virtual_text = true,
             underline = false,
             update_in_insert = false,
+            float = {
+                header = false,
+                border = "rounded",
+            }
         })
 
         -- Show line diagnostics automatically in hover window
         vim.o.updatetime = 250
         vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
 
-        local fidget = require("fidget")
         local lsp = require('lspconfig')
-
-        require("fidget").setup({})
 
         vim.api.nvim_create_autocmd('LspAttach', {
             desc = 'LSP actions',
@@ -46,12 +47,12 @@ return {
                 vim.keymap.set('n', '<F4>', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
 
                 require("keymaps").lsp_on_attach(opts)
-                fidget.notify("LSP client attached:" .. client.name);
+                vim.notify("LSP client attached:" .. client.name, "debug");
             end,
         })
 
-        local cfg = require('go.lsp').config()
-        lsp.gopls.setup(cfg)
+        -- local cfg = require('go.lsp').config()
+        -- lsp.gopls.setup(cfg)
 
         lsp.lua_ls.setup({
             settings = {
@@ -74,6 +75,7 @@ return {
         })
 
         lsp.omnisharp.setup({
+            capabilities = capabilities,
             cmd = {
                 "dotnet",
                 vim.fn.expand("$HOME/omnisharp/v1.39.11/OmniSharp.dll"),
@@ -98,8 +100,11 @@ return {
                     IncludePrereleases = true,
                 },
             },
+            handlers = {
+                ["textDocument/codeLens"] = vim.lsp.codelens.on_codelens,
+            },
             on_attach = function(client, bufnr)
-                fidget.notify("OmniSharp client attaching...");
+                vim.notify("OmniSharp client attaching...", "debug");
                 -- client.server_capabilities.semanticTokensProvider = true
                 -- client.server_capabilities.semanticTokensProvider = nil
             end
@@ -115,7 +120,7 @@ return {
             },
             on_attach = function(client, bufnr)
                 vim.opt.shiftwidth = 2
-                fidget.notify("Volar client attaching...");
+                vim.notify("Volar client attaching...", "debug");
             end
         });
 

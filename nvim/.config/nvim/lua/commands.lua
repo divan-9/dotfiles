@@ -52,11 +52,12 @@ vim.api.nvim_create_user_command(
         end
 
         if solution == "" then
+            vim.notify("No *.sln files found. " .. vim.fn.expand('%:p'), "error")
             print("No *.sln files found. " .. vim.fn.expand('%:p'))
             return
         end
 
-        vim.notify("Building solution: " .. solution)
+        vim.notify("Building solution: " .. solution, vim.log.levels.INFO)
 
         local lines = {}
         local job = Job:new({
@@ -69,7 +70,12 @@ vim.api.nvim_create_user_command(
                 end
             end,
             on_exit = vim.schedule_wrap(function(j, code)
-                vim.notify("Build finished. Code=" .. code)
+                local level = "info"
+                if code ~= 0 then
+                    level = "error"
+                end
+                vim.notify("Build finished. Code=" .. code, level)
+
                 if code ~= 0 then
                     vim.fn.setqflist({}, "r", {
                         title = "Build",
