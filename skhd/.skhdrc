@@ -106,8 +106,8 @@ alt - 9: yabai -m space --focus 9
 shift + alt - 9: yabai -m window --space 9; yabai -m space --focus 9
 
 # Change focused space 
-alt - 0x2B: yabai -m space --focus prev
-alt - 0x2F: yabai -m space --focus next
+alt - 0x2B: yabai -m space --focus prev;
+alt - 0x2F: yabai -m space --focus next;
 
 # Move focus container to workspace
 # shift + alt - > (,): yabai -m window --space 1
